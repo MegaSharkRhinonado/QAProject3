@@ -1,7 +1,9 @@
+import NRCard01 from "./NewReleasesCards/NRCard01";
+
 const NewReleases = () => {
     return ( 
         <>
-            <h2>New Releases</h2>
+            <NRCard01 />
         </>
      );
 }
