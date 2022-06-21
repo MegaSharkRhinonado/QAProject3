@@ -1,7 +1,9 @@
+import CCard01 from "./ClassificationCards/CCard01";
+
 const Classification = () => {
     return ( 
         <>
-            <h2>Classification</h2>
+            <CCard01 />
         </>
      );
 }
