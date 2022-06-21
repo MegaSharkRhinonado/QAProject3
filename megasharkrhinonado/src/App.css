@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* NAVBAR */
+
+.headContainer{
+  text-align: center;
+  font-size: 2em;
+  color: red;
+  background-color: #282c34;
+}
+.navContainer{
+
+}
+.navContainer > button {
+  padding:6px;
+  margin-left:5%;
+  margin-right:5%;
+  margin-bottom: 1%;
+  background-color: #ffffff;
+}
+
+
+
+
+/* NAVBAR */
