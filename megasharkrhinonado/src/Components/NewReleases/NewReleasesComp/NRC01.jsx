@@ -1,10 +1,11 @@
+// change source to the image needed
+
+import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
 
 // remember to change these to the data retreived by the database
-title = "testTitle1"
-description = "testDescription1"
-time = ["time1","time2","time3"]
-// change source to the image needed
-import image01 from '../../../Media/HomePage/CinemaStretch';
+let title = "testTitle1";
+let description = "testDescription1";
+let time = ["time1","time2","time3"];
 
 const NRC01 = () => {
     return ( 
