@@ -72,3 +72,23 @@ input:active{
   filter: contrast(50%);
 }
 /* NAVBAR */
+
+/* Footer */
+.footContainer{
+  background-color: #2d2d2d;
+  padding:4px;
+  list-style-type:none;
+  height: 100px;
+}
+.footContainer > table{
+  float: right;
+}
+td{
+font-size: 120%;
+color: #61dafb;
+padding-right:8%;
+width: 12%;
+filter: contrast(50%);
+}
+
+/* Footer */

@@ -4,8 +4,7 @@ import logo from '../../Media/Nav/LOGO.png';
 const NavBar = () => {
     return ( 
         <>
-            <div className="headContainer">
-                
+            <div className="headContainer"> 
                 <Link to="/"><img className="left" src={logo} alt="LOGO" width="200"></img></Link>
                 <h2>QA Cinemas</h2>
                 <div className="navContainer">
@@ -16,7 +15,6 @@ const NavBar = () => {
                     <Link to="/Forums"><input type="button" value = "Forum"></input></Link>
                 </div>
             </div >
-
         </>
      );
 }
