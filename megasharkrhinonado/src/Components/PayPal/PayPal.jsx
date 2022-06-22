@@ -1,6 +1,6 @@
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import { useEffect } from "react";
-const amount = "3.99"
+const amount = "30000.99"
 const style = { "layout": "vertical" };
 const currency = "GBP";
 
