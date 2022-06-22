@@ -20,18 +20,21 @@ const BCCon11 = () => {
             <h2>Time: {time}</h2>
             <div>
                     <label>
-                    <br />Name</label>
+                    <br />Name
+                    </label>
                     <br /> <input type="text" id="name" />
             </div>
             <div>
                     <label>
-                    <br />Email</label>
+                    <br />Email
+                    </label>
                     <br /> <input type="text" id="email" />
             </div>
             <div >
-                    <label>
-                    <br />Email</label>
-                    <br /> <input type="number" id="children" />
+                    <label><br />Email
+                    </label>
+                    <br />
+                    <input type="number" id="children" />
             </div>
 
             <h2>Seats: {seats}</h2>
