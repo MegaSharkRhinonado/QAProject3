@@ -1,9 +1,3 @@
-
-// Please change and set these to what they should show
-let movieTitle = "testtitle1";
-let date = "testDate";
-let time= "testTime";
-
 // will need method to link to seating plan seats that have been selected
 let seats = ["testSeat1","testSeat2"];
 
@@ -11,15 +5,16 @@ let seats = ["testSeat1","testSeat2"];
 let price = "testPrice";
 
 
-const BC11 = () => {
+const BC11 = (data) => {
+
     return ( 
         <>
-            <h2>Movie Title: {movieTitle} </h2>
-            <h2>Date: {date}</h2>
-            <h2>Time: {time}</h2>
+            <h2>Movie Title: {data.movieTitle} </h2>
+            <h2>Date: {data.date}</h2>
+            <h2>Time: {data.time}</h2>
             <div>
                     <label>
-                    <br />Name</label>
+                    <br />Name: </label>
                     <br /> <input type="text" id="name" />
             </div>
             <div>
@@ -33,8 +28,8 @@ const BC11 = () => {
                     <br /> <input type="number" id="children" />
             </div>
 
-            <h2>Seats: {seats}</h2>
-            <h2>Price: {price}</h2>
+            <h2>Seats: {data.seats}</h2>
+            <h2>Price: {data.amount}</h2>
        </>
      );
 }
