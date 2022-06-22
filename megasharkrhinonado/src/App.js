@@ -27,7 +27,7 @@ function App() {
           <Route path ="/BookingConfirmation" element={<BookingConfirmation />} />
           <Route path ="/Classifications" element={<Classification />} />
           <Route path ="/ContactUs" element={<ContactUs />} />
-          <Route path ="/Forum" element={<Forums />} />
+          <Route path ="/Forums" element={<Forums />} />
           <Route path ="/ListingGallery" element={<ListingGallery />} />
           <Route path ="/NewReleases" element={<NewReleases />} />
           <Route path ="/OpeningTimes" element={<OpeningTimes />} />
