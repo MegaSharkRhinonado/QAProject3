@@ -66,7 +66,7 @@ const MOVIE_SCHEMA = new Schema({
 
     },
     runtime: {
-        type: Number,
+        type: String,
         required: [true, "Movie runtime is required"]
     },
     movieShowings: [MOVIE_SHOWINGS_SCHEMA],
