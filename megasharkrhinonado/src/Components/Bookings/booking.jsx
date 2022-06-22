@@ -1,12 +1,13 @@
+import BCard01 from "./BookingsCards/BCard01";
+import BCard02 from "./BookingsCards/BCard02"
+
 const Booking = () => {
     return ( 
         <>
-            <h2>Booking</h2>
+            <BCard01 />
+            <BCard02 />
         </>
      );
 }
  
 export default Booking;
-<>
-    <h2>Booking</h2>
-</>
