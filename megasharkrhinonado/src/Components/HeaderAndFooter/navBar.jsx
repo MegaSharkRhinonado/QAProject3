@@ -5,16 +5,15 @@ const NavBar = () => {
     return ( 
         <>
             <div className="headContainer">
+                
+                <Link to="/"><img className="left" src={logo} alt="LOGO" width="200"></img></Link>
                 <h2>QA Cinemas</h2>
-                <Link to="/"><img src={logo} alt="LOGO"></img></Link>
                 <div className="navContainer">
-                    <button type="button"><Link exact to="/">Home</Link></button>
-                    <button type="button"><Link to="/ListingGallery">Listings</Link></button>
-                    <button type="button"><Link to="/Bookings">Bookings</Link></button>
-                    <button type="button"><Link to="/Classifications">Classifications</Link></button>
-                    <button type="button"><Link to="/Screens">Screens</Link></button>
-                    <button type="button"><Link to="/NewReleases">New Releases</Link></button>
-                    <button type="button"><Link to="/Forums">Forum</Link></button>
+                    <Link to="/"><input type="button" value="Home" /></Link>
+                    <Link to="/ListingGallery"><input type="button" value = "Listings"></input></Link>
+                    <Link to="/NewReleases"><input type="button" value = "New Releases"></input></Link>
+                    <Link to="/Screens"><input type="button" value = "Screens"></input></Link>
+                    <Link to="/Forums"><input type="button" value = "Forum"></input></Link>
                 </div>
             </div >
 
