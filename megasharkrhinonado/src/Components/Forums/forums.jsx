@@ -1,7 +1,12 @@
+
+import FCard01 from "./ForumCards/FCard01";
+import FCard02 from "./ForumCards/FCard02";
+
 const Forums = () => {
     return ( 
         <>
-            <h2>Forums</h2>
+            <FCard01 />
+            <FCard02 />
         </>
      );
 }
