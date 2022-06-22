@@ -1,7 +1,9 @@
+import ForumCard01 from "./ForumsCard/ForumCard01";
+
 const Forums = () => {
     return ( 
         <>
-            <h2>Forums</h2>
+            <ForumCard01 />
         </>
      );
 }
