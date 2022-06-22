@@ -1,11 +1,27 @@
-import NRCard01 from "./NewReleasesCards/NRCard01";
+import NRC01 from "./NewReleasesComp/NRC01";
+import axios from 'axios';
+import React, { useEffect, useState } from "react";
 
 const NewReleases = () => {
-    return ( 
+    
+    const [newReleases, setNewReleases] = useState([]);
+
+    axios.get("http://localhost:3000/movies/getAll")
+    .then(response => {
+        setNewReleases(response.data)
+    }).catch((exception) => {
+        console.log(exception);
+    });
+
+    return (
         <>
-            <NRCard01 />
+            {
+                newReleases.map(newRelease => 
+                 <NRC01 data={newRelease} key={newRelease.id} />
+                )
+            }
         </>
-     );
+    );
 }
- 
+
 export default NewReleases;
