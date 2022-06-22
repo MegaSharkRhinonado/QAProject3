@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Routes, BrowserRouter as Router} from "react-router-dom";
-import Forums from './Components/Forums/forums';
+import Forums from './Components/Forum/forums';
 import Footer from './Components/HeaderAndFooter/footer';
 import NavBar from './Components/HeaderAndFooter/navBar';
 import HomePage from './Components/Homepage/homepage';
