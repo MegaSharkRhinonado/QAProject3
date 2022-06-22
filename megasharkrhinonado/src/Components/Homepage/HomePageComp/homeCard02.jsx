@@ -1,6 +1,6 @@
 // change the source of the image for what is needed
 
-import image01 from '../../../Media/HomePage/CinemaStretch';
+import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
 
 const homeCard02 = () => {
     return ( 

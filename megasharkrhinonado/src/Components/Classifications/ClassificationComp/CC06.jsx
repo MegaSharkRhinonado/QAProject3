@@ -1,7 +1,6 @@
 
 // change source to the image needed
-import image01 from '../../../Media/HomePage/CinemaStretch'
-
+import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
 const CC06 = () => {
     return ( 
         <>

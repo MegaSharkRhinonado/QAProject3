@@ -1,8 +1,8 @@
 
 // change source to the image needed
-import image01 from '../../../Media/HomePage/CinemaStretch';
-import image02 from '../../../Media/HomePage/CinemaStretch';
-import image03 from '../../../Media/HomePage/CinemaStretch';
+import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
+import image02 from '../../../Media/HomePage/CinemaStretch.jpg';
+import image03 from '../../../Media/HomePage/CinemaStretch.jpg';
 
 const homeCard11 = () => {
     return ( 
