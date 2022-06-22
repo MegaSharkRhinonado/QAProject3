@@ -1,10 +1,10 @@
-import homeCard11 from "../HomePageComp/homeCard11";
+import HomeCard11 from "../HomePageComp/homeCard11";
 
 
 const HPMainCard02 = () => {
     return ( 
         <>
-        <homeCard11 />
+        <HomeCard11 />
         
         </>
      );
