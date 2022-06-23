@@ -3,21 +3,27 @@ import axios from 'axios';
 import React, { useEffect, useState } from "react";
 
 const NewReleases = () => {
-    
+
     const [newReleases, setNewReleases] = useState([]);
 
-    axios.get("http://localhost:3000/movies/getAll")
-    .then(response => {
-        setNewReleases(response.data)
-    }).catch((exception) => {
-        console.log(exception);
-    });
+    const getReleases = () => {
+        axios.get("http://localhost:3000/movies/getAll")
+            .then(response => {
+                setNewReleases(response.data)
+            }).catch((exception) => {
+                console.log(exception);
+            });
+    }
+
+    useEffect(() => {
+        getReleases();
+    }, []);
 
     return (
         <>
             {
-                newReleases.map(newRelease => 
-                 <NRC01 data={newRelease} key={newRelease.id} />
+                newReleases.map(newRelease =>
+                    <NRC01 data={newRelease} key={newRelease.id} />
                 )
             }
         </>
