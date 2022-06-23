@@ -4,8 +4,8 @@ const BC11 = ({data}) => {
     return ( 
         <>
             <h2>Movie Title: {data.movieTitle} </h2>
-            <h2>Date: {data.movieShowings.date}</h2>
-            <h2>Time: {data.movieShowings.time}</h2>
+            <h2>Date: {data.date}</h2>
+            <h2>Time: {data.time}</h2>
             <div>
                     <label>
                     <br />Name: </label>
