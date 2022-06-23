@@ -106,3 +106,16 @@ filter: contrast(50%);
 }
 
 /* Footer */
+
+/* Places To Go */
+.PTGDivs{
+  margin-right: 5%;
+  margin-left: 5%;
+  border-style: solid;
+  border-color:  rgb(246, 8, 8);;
+  text-align: center;
+  
+}
+
+
+/* Places To Go */
