@@ -23,7 +23,7 @@ function App() {
         <Routes>
           <Route path ="/" element={<HomePage />} />
           <Route path ="/About" element={<About />} />
-          <Route path ="/Bookings" element={<Booking />} />
+          <Route path ="/Booking/:data" element={<Booking />} />
           <Route path ="/BookingConfirmation" element={<BookingConfirmation />} />
           <Route path ="/Classifications" element={<Classification />} />
           <Route path ="/ContactUs" element={<ContactUs />} />
