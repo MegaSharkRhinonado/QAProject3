@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 //Added error responses for testing purposes
 const MOVIE_SHOWINGS_SCHEMA = new Schema({
     date: {
-        type: Date,
+        type: String,
         message: "{VALUE} is not supported",
         required: [true, "Date is required"]
     },
