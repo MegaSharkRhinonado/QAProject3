@@ -1,15 +1,12 @@
-
-// change source to the image needed
-import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
+import BBFC_U from '../../../Media/Classifications/BBFC_U.png';
 
 const CC01 = () => {
     return ( 
         <>
-        {/* alter the alt tag for what is needed */}
-        <img src={image01} alt="PictureOfCinema" width="350px"/>
-
-        {/* change the text to suit the classification */}
-        <h3>Text about the classification</h3>
+          <tr>
+            <td><img src={BBFC_U} alt="Universal Rating Logo" width="100%"/></td>
+            <td><h3>U Universal - Suitable for all</h3></td>
+          </tr>
        </>
      );
 }
