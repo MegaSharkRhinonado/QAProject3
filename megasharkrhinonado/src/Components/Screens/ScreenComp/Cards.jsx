@@ -1,7 +1,6 @@
 import CardsImage from "./CardImage";
 
 const Cards = (data) => {
-    console.log(data.title)
     return ( 
         <>
         <h4>{data.title}</h4>
