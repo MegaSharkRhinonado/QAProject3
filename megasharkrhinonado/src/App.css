@@ -56,6 +56,8 @@ body{
   padding: 1% 1% 1% 1%;
 }
 .headContainer{
+  padding-top: 1%;
+  width:100%;
   text-align: center;
   font-size: 2em;
   color: rgb(170, 142, 43);
@@ -90,12 +92,12 @@ input:active{
   background-color: #2d2d2d;
   padding:4px;
   list-style-type:none;
-  height: 100px;
+  height: 100vh;
 }
 .footContainer > table{
   float: right;
 }
-td{
+tbody > td{
 font-size: 120%;
 color: #61dafb;
 padding-right:8%;
