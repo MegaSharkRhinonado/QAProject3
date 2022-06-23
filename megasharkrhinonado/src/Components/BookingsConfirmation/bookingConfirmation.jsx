@@ -1,7 +1,10 @@
+import BCConcard01 from "./BookingsConCards/BCConcard01";
+
+
 const BookingConfirmation = () => {
     return ( 
         <>
-            <h2>Booking Confirmation</h2>
+            <BCConcard01 />
         </>
      );
 }
