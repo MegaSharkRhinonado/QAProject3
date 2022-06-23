@@ -1,7 +1,13 @@
+import ScreenCards from "./ScreenComp/ScreenCards";
+
 const Screens = () => {
     return ( 
         <>
-            <h2>Screens</h2>
+            <div className="content">
+                <h2>Screens</h2>
+                <ScreenCards />
+            </div>
+            
         </>
      );
 }

@@ -1,0 +1,9 @@
+.class{
+    margin:2%;
+}
+tbody > tr {
+    height: 150px;
+}
+tr > td{
+    min-width:150px;
+}

@@ -1,7 +1,9 @@
+import ACard01 from "./AboutCards/ACard01";
+
 const About = () => {
     return ( 
         <>
-            <h2>About</h2>
+            <ACard01 />
         </>
      );
 }

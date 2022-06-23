@@ -1,6 +1,6 @@
 
 
-const homeCard21 = () => {
+function homeCard21 () {
     return ( 
         <>
         {/* please edit what needs to be in this div */}

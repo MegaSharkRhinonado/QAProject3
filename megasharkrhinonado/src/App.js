@@ -1,6 +1,6 @@
 import './App.css';
 import {Route, Routes, BrowserRouter as Router} from "react-router-dom";
-import Forums from './Components/Forums/forums';
+import Forums from './Components/Forum/forums';
 import Footer from './Components/HeaderAndFooter/footer';
 import NavBar from './Components/HeaderAndFooter/navBar';
 import HomePage from './Components/Homepage/homepage';
@@ -23,11 +23,11 @@ function App() {
         <Routes>
           <Route path ="/" element={<HomePage />} />
           <Route path ="/About" element={<About />} />
-          <Route path ="/Bookings" element={<Booking />} />
+          <Route path ="/Booking/:data" element={<Booking />} />
           <Route path ="/BookingConfirmation" element={<BookingConfirmation />} />
           <Route path ="/Classifications" element={<Classification />} />
           <Route path ="/ContactUs" element={<ContactUs />} />
-          <Route path ="/Forum" element={<Forums />} />
+          <Route path ="/Forums" element={<Forums />} />
           <Route path ="/ListingGallery" element={<ListingGallery />} />
           <Route path ="/NewReleases" element={<NewReleases />} />
           <Route path ="/OpeningTimes" element={<OpeningTimes />} />

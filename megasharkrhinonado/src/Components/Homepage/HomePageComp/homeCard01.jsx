@@ -1,13 +1,16 @@
 
 // change source to the image needed
-import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
+import image01 from '../../../Media/HomePage/StretchCinema.png';
 
 const homeCard01 = () => {
     return ( 
         <>
-        {/* alter the alt tag for what is needed */}
-        <img src={image01} alt="PictureOfCinema" width="350px"/>
-        
+        <center style={{
+            margin: '1% 0px 0px 0%',
+
+          }}>
+        <img src={image01} alt="CinemaBanner" width="90%" height="200px"/>
+        </center>
        </>
      );
 }

@@ -1,9 +1,14 @@
+import PTGCard01 from "./PTGCard/PTGCard01"
+
+
 const PlacesToGo = () => {
-    return ( 
+    return (
         <>
-            <h2>Places To Go</h2>
+            <div className="content">
+                <PTGCard01 />
+            </div>
         </>
-     );
+    );
 }
- 
+
 export default PlacesToGo;

@@ -1,16 +1,13 @@
-
-// change source to the image needed
-import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
+import BBFC_12A from '../../../Media/Classifications/BBFC_12A.png';
 
 const CC04 = () => {
     return ( 
-        <>
-        {/* alter the alt tag for what is needed */}
-        <img src={image01} alt="PictureOfCinema" width="350px"/>
-
-        {/* change the text to suit the classification */}
-        <h3>Text about the classification</h3>
-       </>
+      <>
+        <tr>
+          <td><img src={BBFC_12A} alt="12A Rating Logo" width="100%"/></td>
+          <td><h3>12 – Suitable for 12 years and over, Unless accompanies by an Adult</h3></td>
+        </tr>
+      </>
      );
 }
 

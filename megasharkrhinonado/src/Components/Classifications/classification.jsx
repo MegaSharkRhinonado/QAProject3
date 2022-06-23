@@ -3,7 +3,9 @@ import CCard01 from "./ClassificationCards/CCard01";
 const Classification = () => {
     return ( 
         <>
-            <CCard01 />
+            <div className="content">
+                <CCard01 />
+            </div>
         </>
      );
 }
