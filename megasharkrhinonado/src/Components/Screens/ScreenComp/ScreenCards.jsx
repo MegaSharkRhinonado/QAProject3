@@ -26,8 +26,8 @@ const ScreenCards = () => {
     return ( 
         <>
         {
-            cardData.map((cData) => {
-                return <div className="screenCards"><Cards data={cData}/></div>
+            cardData.map(data => {
+                return <div className="screenCards"><Cards title={data.title} imageUrl={data.imageUrl} imageTitle={data.imageTitle}/></div>
             })
         }
         </>

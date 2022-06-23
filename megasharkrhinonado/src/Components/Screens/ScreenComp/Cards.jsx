@@ -1,11 +1,11 @@
 import CardsImage from "./CardImage";
 
-const Cards = (cData) => {
-    console.log(cData.title)
+const Cards = (data) => {
+    console.log(data.title)
     return ( 
         <>
-        <h4>{cData.title}</h4>
-        <CardsImage imageUrl={cData.imageUrl} imageTitle={cData.imageTitle}/>
+        <h4>{data.title}</h4>
+        <CardsImage imageUrl={data.imageUrl} imageTitle={data.imageTitle}/>
         </>
      );
 }
