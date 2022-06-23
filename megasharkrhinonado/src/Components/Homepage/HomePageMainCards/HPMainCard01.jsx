@@ -4,7 +4,8 @@ import HomeCard02 from "../HomePageComp/homeCard02";
 const HPMainCard01 = () => {
     return ( 
         <>
-        <HomeCard01 />
+        <div><HomeCard01 /></div>
+
         <HomeCard02 />
         </>
      );

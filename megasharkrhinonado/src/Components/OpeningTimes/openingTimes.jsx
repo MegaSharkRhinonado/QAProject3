@@ -1,7 +1,12 @@
+
+import OTCard01 from "./OpeningTimeCard/OTCard01";
+import OTCard02 from "./OpeningTimeCard/OTCard02";
+
 const OpeningTimes = () => {
     return ( 
         <>
-            <h2>Opening Times</h2>
+            <OTCard01 />
+            <OTCard02 />
         </>
      );
 }
