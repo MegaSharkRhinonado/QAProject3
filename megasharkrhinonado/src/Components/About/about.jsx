@@ -3,7 +3,9 @@ import ACard01 from "./AboutCards/ACard01";
 const About = () => {
     return ( 
         <>
-            <ACard01 />
+            <div className="content">
+                <ACard01 />
+            </div> 
         </>
      );
 }

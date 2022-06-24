@@ -1,28 +1,37 @@
 const ForumComp02 = () => {
-    return ( 
+    return (
         <>
-        <div>
-        <div>
-            <h2>Discussion Board</h2>
-            <div id="disOne">
-            <p>Text</p>
-            <input type="text"></input>
-            </div>
-            <div id="disTwo">
-            <p>Text</p>
-            <input type="text"></input>
-            </div>
-            <div id="disThree">
-            <p>Text</p>
-            <input type="text"></input>
-            </div>
-            <div id="disFour">
-            <p>Text</p>
-            <input type="text"></input>
-            </div>
-           </div>
-        </div>
+            <center>
+                <div style={{
+                    margin: '0px 0px 2% 0%'
+                }}>
+                    <h2>Discussion Board</h2>
+                    <div>
+                        <label>
+                            <br />Movie Title</label>
+                        <br /> <input type="text" id="topic" />
+                    </div>
+                    <div>
+                        <label>
+                            <br />Name</label>
+                        <br /> <input type="text" id="Name Of User" />
+                    </div>
+                    <div>
+                        <label>
+                            <br />Rating</label>
+                        <br /> <input type="text" id="topic" />
+                    </div>
+
+                    <div>
+                        <label>Description</label>
+                        <br />
+                        <textarea type="text" class="CEN" id="creatureNotes" />
+                    </div>
+
+                    <center><button id="createObjBtn">Submit</button></center>
+                </div>
+            </center>
         </>
     );
-    }
+}
 export default ForumComp02;
