@@ -26,7 +26,7 @@ const Booking = () => {
 
     return (
         <>
-            <BC11 data={movie} />
+            <BCard01 data={movie} />
             <BCard02 />
         </>
     );

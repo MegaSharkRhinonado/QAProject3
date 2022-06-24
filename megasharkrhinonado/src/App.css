@@ -119,3 +119,19 @@ filter: contrast(50%);
 
 
 /* Places To Go */
+
+
+/* Getting There */
+.map-header{
+  text-align: center;
+}
+.map {
+  display: flex;
+  justify-content: center;
+
+}
+.map-info{
+  text-align: center;
+}
+
+/* Getting There */

@@ -24,7 +24,7 @@ const Footer = () => {
                             <li></li>
                         </td>
                         <td>
-                            <li><Link to="/">Getting Here?</Link></li>
+                            <li><Link to="/GettingThere">Getting Here?</Link></li>
                             <li><Link to="/PlacesToGo">Whats Local</Link></li>
                             <li></li>
                         </td>

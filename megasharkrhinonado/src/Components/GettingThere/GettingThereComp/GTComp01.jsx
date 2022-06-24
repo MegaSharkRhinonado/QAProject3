@@ -1,27 +1,12 @@
-import React, { Component } from 'react';
-import { MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
+import React from "react";
 
-const position = [51.505, -0.09]
 
-export class GTComp01 extends Component {
-    render(){
-        return(
-            <>
-            
-        <MapContainer center={position} zoom={13} scrollWheelZoom={false}>
-            <TileLayer
-                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            />
-            <Marker position={position}>
-                <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
-                </Popup>
-            </Marker>
-        </MapContainer>
-        </>
-    );
-    }
+const GTComp01 = () => {
+  return (
+    <>
+    <iframe src="http://lotrproject.com/map/#zoom=3&lat=-1344&lon=1500&layers=BTTTTT" width="60%" height="300px" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </>
+  )
 }
 
-
+export default GTComp01;
