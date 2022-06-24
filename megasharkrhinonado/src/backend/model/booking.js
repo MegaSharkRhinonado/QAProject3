@@ -19,7 +19,7 @@ const SEATID_SCHEMA = new Schema({
 const PAYMENT_INFO_SCHEMA = new Schema({
     amount: {
         type: Number,
-        required: [true, "Payment needs an amount"]
+        // required: [true, "Payment needs an amount"]
     },
     paid: {
         type: Boolean
@@ -37,14 +37,14 @@ const BOOKINGS_SCHEMA = new Schema({
         required: [true, "Booking needs an Email"]
     },
     date: {
-        type: Date,
+        type: String,
         required: [true, "Booking needs a Date"]
     },
     time: {
         type: String,
         required: [true, "Booking needs a Time"]
     },
-    childeren: {
+    children: {
         type: Number
     },
     seatID: [SEATID_SCHEMA],
