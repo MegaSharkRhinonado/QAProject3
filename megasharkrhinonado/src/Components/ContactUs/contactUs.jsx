@@ -8,10 +8,12 @@ import CCard04 from "./ContactusCards/CCard04";
 const ContactUs = () => {
     return ( 
         <>
+            <div className="content">
             <CCard01 />    
             <CCard02 /> 
             <CCard03 />
             <CCard04 />
+            </div>
         </>
      );
 }
