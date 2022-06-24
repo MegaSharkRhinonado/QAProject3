@@ -153,6 +153,7 @@ filter: contrast(50%);
 
 /* Places To Go */
 
+
 .floatRight{
   float:right;
 }
@@ -175,3 +176,20 @@ filter: contrast(50%);
   border:2px solid rgba(0, 0, 0, 0.2);
   list-style-type:none;
 }
+
+
+/* Getting There */
+.map-header{
+  text-align: center;
+}
+.map {
+  display: flex;
+  justify-content: center;
+
+}
+.map-info{
+  text-align: center;
+}
+
+/* Getting There */
+
