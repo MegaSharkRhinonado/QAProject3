@@ -1,16 +1,26 @@
-
-
 import image01 from '../../../Media/HomePage/CinemaStretch.jpg';
+import Twitter from '../../../Media/Foot/logos/Twitter.png';
+import Facebook from '../../../Media/Foot/logos/Facebook.png';
+import Reddit from '../../../Media/Foot/logos/Reddit.png';
 
 const AC03 = () => {
     return ( 
       <>
         <div className="aboutContent">
           {/* change the alt text for what is needed */}
-          <img src={image01} alt="PictureOfCinema" width="350px"/>
-
+          <table>
+            <img src={image01} alt="PictureOfCinema" width="350px"/>
+            <td>
+                <tr><a href='https://twitter.com/LOTR_Quotes'><img className="left" src={Twitter} alt="Twitter" width="40"></img></a></tr>
+                <tr><a href='https://facebook.com/Lord-of-the-Rings-113432253662188'><img className="left" src={Facebook} alt="Facebook" width="40"></img></a></tr>
+                <tr><a href='https://www.reddit.com/r/lotr/'><img className="left" src={Reddit} alt="Reddit" width="40"></img></a></tr>
+            </td>
+          </table>
+          <h2>Peasent Eli</h2>
+          
           {/* change what is in the text for what is needed */}
-          <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, magnam quam alias ipsum autem iste. Dolore dolorem vel, dignissimos atque recusandae expedita a, id provident facere natus rerum consequatur fugit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est, voluptatum. Consequuntur molestias quae optio cum at vel reiciendis ipsam dolorem cupiditate ipsa, est saepe, id fuga velit laudantium praesentium expedita. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur recusandae delectus asperiores odit iusto quaerat. Mollitia error odit adipisci possimus sint dignissimos quo reprehenderit? Quibusdam rem vel consequuntur neque assumenda?</p>
+          <p> Description ect : I through my own free will must say that i agree with James</p>
+
         </div>
       </>
      );

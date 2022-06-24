@@ -96,13 +96,17 @@ input:active{
   border-radius: 15%;
   background-color: rgba(0, 0, 0, 0.2);
   text-align: center;
+  list-style-type: none;
 }
-.aboutContent > img{
+.aboutContent > table{
   margin-left:auto;
   margin-right:auto;
   width:25%;
   display:flex;
   justify-content: center;
+}
+td > tr{
+  min-height: 60px;
 }
 .titles{
   text-align: center;
