@@ -15,6 +15,7 @@ import Classification from './Components/Classifications/classification';
 import ContactUs from './Components/ContactUs/contactUs';
 import OpeningTimes from './Components/OpeningTimes/openingTimes';
 import PlacesToGo from './Components/PlacesToGo/placesToGo';
+import BilbosPantry from './Components/FoodAndDrink/bilbosPantry';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path ="/PlacesToGo" element={<PlacesToGo />} />
           <Route path ="/Screens" element={<Screens />} />
           <Route path ="/GettingThere" element={<GettingThere />} />
+          <Route path ="/FoodAndDrink" element={<BilbosPantry />} />
         </Routes>
         <Footer />
       </Router>
