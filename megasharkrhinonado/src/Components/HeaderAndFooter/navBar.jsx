@@ -12,7 +12,9 @@ const NavBar = () => {
                     <Link to="/ListingGallery"><input type="button" value = "Listings"></input></Link>
                     <Link to="/NewReleases"><input type="button" value = "New Releases"></input></Link>
                     <Link to="/Screens"><input type="button" value = "Screens"></input></Link>
+                    <Link to="/FoodAndDrink"><input type="button" value = "Bilbo's Pantry"></input></Link>
                     <Link to="/Forums"><input type="button" value = "Forum"></input></Link>
+                    
                 </div>
             </div >
         </>
