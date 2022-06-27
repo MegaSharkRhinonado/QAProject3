@@ -1,8 +1,9 @@
+import '../Classifications/class.css';
 
 const BPComp03 = () => {
     return (
         <>
-        <div style={{float:"center"}} className="content">   
+        <div style={{float:"right", width:"20px"}}>   
             <table>
                 <tr>
                     <th><h2>Food Menu</h2></th>
@@ -13,8 +14,8 @@ const BPComp03 = () => {
                     <th><h3>Wine Selection</h3></th>
                 </tr>
                 <tr>
-                    <td>Lembas Bread: 2.99</td>
-                    <td>Malt Wine: 7.99</td>
+                    <td>Lembas Bread: 5.99</td>
+                    <td>Malt Wine: 6.99</td>
                 </tr>
 
                 <tr>
@@ -33,8 +34,8 @@ const BPComp03 = () => {
                 </tr>
 
                 <tr>
-                    <td>Variety Meat: 13.99</td>
-                    <td>Water: 0.99</td>
+                    <td>Variety Meat: 12.99</td>
+                    <td>Water: 1.99</td>
                 </tr>
 
                 <tr>
@@ -58,12 +59,13 @@ const BPComp03 = () => {
                 </tr>
 
                 <tr>
-                    <td>Coneys with Chips: 8.99</td>
-                    <td>Beer Selection: 3.99</td>
+                    <td>Coneys with Chips: 9.99</td>
+                    <td>Variety of Beers: 3.99</td>
                 </tr>
                 
                 <tr><h3>Desserts</h3></tr>
                 <tr>Honey Cake: 3.99</tr>
+                <tr>Hobbit Legs: 7.99</tr>
             </table>
         </div>  
         </>

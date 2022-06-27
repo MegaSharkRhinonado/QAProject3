@@ -5,13 +5,22 @@ import BPComp02 from "./BPComp02";
 const BPCard01 = () => {
     return (
         <>
-        <div className="pantryDiv">
-        <BPComp01 />
-        </div>
-        <BPComp03 />
-        <BPComp02 />
-        
-        
+            <div className="content">
+                <h2 className="headerBP">Bilbo's Pantry</h2>
+                <BPComp01 />
+                
+                <div className="fdTable">
+                    <BPComp02 />
+                    <table>
+                        <tbody>
+                            
+                            <BPComp03 />
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
         </>
     )
 }

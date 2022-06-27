@@ -4,7 +4,7 @@ const BPComp02 = () => {
     return (
         <>
         <div className="content">
-        <img src={image01} alt="BilbosPantry" height="50%" width="40%" />
+        <img src={image01} style={{float:"left"}} alt="BilbosPantry" height="50%" width="40%" />
         </div>
         </>
     )

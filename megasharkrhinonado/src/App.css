@@ -169,8 +169,14 @@ filter: contrast(50%);
 
 
 .pantryDiv {
-  text-align: center;
+  text-align: right;
 }
 
+.headerBP{
+  text-align: center;
+}
+.fdTable{
+  border: solid #555;
 
+}
 /* FoodAndDrink */
