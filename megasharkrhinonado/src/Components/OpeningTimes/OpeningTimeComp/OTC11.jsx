@@ -2,7 +2,7 @@ function OTC11() {
 
     return(
         <>
-        <div id ="ot">
+        <div>
             <div className="floatLeft" id="ot" style={{maxHeight:'40vh'}}>
                 <h2>Opening Times</h2>
                 <li id="times"><b>Monday</b>        8am–10pm</li>
