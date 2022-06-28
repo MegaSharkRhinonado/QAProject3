@@ -17,7 +17,6 @@ const BC11 = ({ data }) => {
         const bookingDate = data.date;
         const bookingTime = data.time
         const children = "";
-        const seatSelected = [];
 
         const handleDateChange = (event) => {
                 setDateValue(event.target.value);
@@ -31,10 +30,11 @@ const BC11 = ({ data }) => {
                 setIsChecked(
                         isChecked.map((Checked, currentIndex) =>
                                 currentIndex === index
-                                        ? { ...Checked, checked: !isChecked.checked }
-                                        : isChecked
+                                        ? { ...Checked, checked: !Checked.checked }
+                                        : Checked
                         )
                 )
+
         }
 
         const checkAvailable = () => {
@@ -46,21 +46,18 @@ const BC11 = ({ data }) => {
                         console.log("Checking2");
                         result = data.seatID;
                         console.log("result" + result)
-                }
-                )
+                })
 
                 result?.map(data => {
                         console.log(data.seatID);
                         result2 = data.seatID;
-                }
-                )
+                })
 
-
-                const index = seats.map(object => object.name).indexOf(`${result2}`);
+                const index = isChecked.map(object => object.name).indexOf(`${result2}`);
                 console.log("Index:" + index)
-                seats.indexOf(1, { checked: true })
+                isChecked.indexOf(1, { checked: true })
                 //seats.splice(index, 1);
-                console.log(seats)
+                console.log(isChecked)
                 console.log("Exists:" + data);
         }
 
@@ -130,7 +127,7 @@ const BC11 = ({ data }) => {
                                 bookingDate={bookingDate}
                                 bookingTime={bookingTime}
                                 children={children}
-                                seatSelected={seatSelected}
+                                seatSelected={isChecked}
                         />
                 </>
         );
