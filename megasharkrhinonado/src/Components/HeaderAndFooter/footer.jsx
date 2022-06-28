@@ -11,7 +11,7 @@ const Footer = () => {
         {/* about, contact, socials, opening times, geting there, placestogo, class, terms and condish */}
             <div className="footContainer"> 
                
-                <table >
+                <table>
                     <tbody>
                         <td>
                              <Link to="/"><img className="left" src={logo} alt="LOGO" width="100" filter="contrast(100%) "></img></Link>
@@ -23,7 +23,7 @@ const Footer = () => {
                         </td>
                         <td>
                             <li><Link to="/Classifications">Classifications</Link></li>
-                            <li><Link to="/">Terms And Conditions</Link></li>
+                            <li><Link to="/TermsAndConditions">Terms And Conditions</Link></li>
                             <li></li>
                         </td>
                         <td>

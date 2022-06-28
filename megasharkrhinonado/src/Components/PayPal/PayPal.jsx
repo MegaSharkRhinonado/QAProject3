@@ -1,11 +1,16 @@
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
+import axios from "axios";
 import { useEffect } from "react";
-const amount = "30000.99"
+import { useNavigate } from "react-router-dom";
 const style = { "layout": "vertical" };
 const currency = "GBP";
 
-const ButtonWrapper = ({ currency, showSpinner }) => {
+const ButtonWrapper = ({ currency, showSpinner, amount, movieTitle, bookingDate, bookingTime, children, seatSelected }) => {
     const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
+
+    const navigate = useNavigate();
+    const bookingComplete = () => navigate("/BookingConfirmation");
+
 
     useEffect(() => {
         dispatch({
@@ -19,40 +24,64 @@ const ButtonWrapper = ({ currency, showSpinner }) => {
 
 
     return (<>
-            { (showSpinner && isPending) && <div className="spinner" /> }
-            <PayPalButtons
-                style={style}
-                disabled={false}
-                forceReRender={[amount, currency, style]}
-                fundingSource={undefined}
-                createOrder={(data, actions) => {
-                    return actions.order
-                        .create({
-                            purchase_units: [
-                                {
-                                    amount: {
-                                        currency_code: currency,
-                                        value: amount,
-                                    },
+        {(showSpinner && isPending) && <div className="spinner" />}
+        <PayPalButtons
+            style={style}
+            disabled={false}
+            forceReRender={[amount, currency, style]}
+            fundingSource={undefined}
+            createOrder={(data, actions) => {
+                return actions.order
+                    .create({
+                        purchase_units: [
+                            {
+                                amount: {
+                                    currency_code: currency,
+                                    value: amount,
                                 },
-                            ],
-                        })
-                        .then((orderId) => {
-                            // Your code here after create the order
-                            return orderId;
-                        });
-                }}
-                onApprove={function (data, actions) {
-                    return actions.order.capture().then(function () {
-                        // Your code here after capture the order
+                            },
+                        ],
+                    })
+                    .then((orderId) => {
+                        console.log(orderId);
+                        return orderId;
                     });
-                }}
-            />
-        </>
+            }}
+            onApprove={function (data, actions) {
+                return actions.order.capture().then(function (details) {
+                    const { payer } = details;
+                    console.log({ payer })
+                    axios.post('http://localhost:3000/bookings/post', {
+                        movieTitle: movieTitle,
+                        email: details.payer.email_address,
+                        date: bookingDate,
+                        time: bookingTime,
+                        children: children,
+                        seatID: seatSelected,
+                        payment: [{
+                            amount: amount
+                        }
+                        ]
+                    })
+                        .then(response => {
+                            console.log(response);
+                            console.log(details)
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
+
+                    bookingComplete();
+                })
+
+
+            }}
+        />
+    </>
     );
 }
 
-export default function PayPal() {
+export default function PayPal({ amount, movieTitle, bookingDate, bookingTime, children, seatSelected }) {
     return (
         <>
             <PayPalScriptProvider options={{
@@ -63,6 +92,12 @@ export default function PayPal() {
                 <ButtonWrapper
                     currency={currency}
                     showSpinner={false}
+                    amount={amount}
+                    movieTitle={movieTitle}
+                    bookingDate={bookingDate}
+                    bookingTime={bookingTime}
+                    children={children}
+                    seatSelected={seatSelected}
                 />
             </PayPalScriptProvider>
         </>
