@@ -1,22 +1,34 @@
 
 import image01 from '../../../Media/HomePage/StretchCinema.png';
 import image02 from '../../../Media/HomePage/TwoTowers.jpg';
+//  Festivle images
+import foodFest from '../../../Media/Events/FoodFest.jpg'
+import gandolfThrowingDown from '../../../Media/Events/GandolfThrowingItDown.jpg'
+import theRing from '../../../Media/Events/TheRealRing.jpg'
+import dwarfCheese from '../../../Media/Events/GreedyDwarfs.jpg'
+
+
+
 import { Slide } from 'react-slideshow-image';
 import React from 'react';
 import 'react-slideshow-image/dist/styles.css'
 
 const slideImages = [
     {
-        url: image01,
-        caption: 'Slide 1'
+        url: foodFest,
+        caption: 'foodFest'
     },
     {
-        url: image02,
-        caption: 'Slide 2'
+        url: gandolfThrowingDown,
+        caption: 'Wizard dancing'
     },
     {
-        url: image01,
-        caption: 'Slide 3'
+        url: dwarfCheese,
+        caption: 'dwarf holding LOTS of cheese'
+    },
+    {
+        url: theRing,
+        caption: 'the Ring'
     },
 ];
 
