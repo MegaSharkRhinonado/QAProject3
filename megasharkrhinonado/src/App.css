@@ -123,9 +123,9 @@ td > tr{
 /* Footer */
 .footContainer{
   background-color: #2d2d2d;
-  padding:4px;
+  padding:1%;
   list-style-type:none;
-  height: 10vh;
+  height: 17vh;
 }
 .footContainer > table{
   float: right;

@@ -10,7 +10,6 @@ const ContactUs = () => {
             <div className="content">
             <CCard01 />    
             <CCard03 />
-            <CCard04 />
             </div>
 
         </>
