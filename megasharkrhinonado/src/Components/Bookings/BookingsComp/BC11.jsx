@@ -12,9 +12,6 @@ const BC11 = ({ data }) => {
         const [timeValue, setTimeValue] = useState("");
         const [dateValue, setDateValue] = useState("");
         const [isChecked, setIsChecked] = useState(seats)
-        const [total, setTotal] = useState(0);
-
-
 
         const handleDateChange = (event) => {
                 setDateValue(event.target.value);
@@ -120,40 +117,8 @@ const BC11 = ({ data }) => {
                                                 index={index}
                                         />
                                 ))}
-                                {/* <input type="checkbox" id="A1" checked={isChecked} onChange={() => checkHandler("A1")} />
-                                <input type="checkbox" id="A2" checked={isChecked} onChange={checkHandler} />
-                                <input type="checkbox" id="A3" checked={isChecked} onChange={checkHandler} />
-                                <input type="checkbox" id="A4" checked={isChecked} onChange={checkHandler} />
-                                <input type="checkbox" id="A5" checked={isChecked} onChange={checkHandler} /> */}
-                                {/* <input type="checkbox" id="A6" checked={isChecked} onChange={checkHandler}/>
-                                <input type="checkbox" id="A7" checked={isChecked} onChange={checkHandler}/>
-                                <input type="checkbox" id="A8" checked={isChecked} onChange={checkHandler}/>
-                                <input type="checkbox" id="A9" checked={isChecked} onChange={checkHandler}/>
-                                <input type="checkbox" id="A10" checked={isChecked} onChange={checkHandler}/> */}
-                                {
-
-                                        // available.seatID?.map(data, i => {
-                                        //         console.log("Exists:" + data.booked)
-
-                                        //         if (data.booked == true) {
-                                        //                 // <option key={i} value={data.SeatID}>{data.SeatID}</option>
-                                        //                 console.log("Booked:" + data.seatID)
-                                        //                         (data.seatID).checked = true;
-                                        //         }
-
-                                        // })
-                                }
                         </div>
-
-
-
-                        {/* <PayPal /> */}
-
-
-                        {/* <h2>Seats: {(data.seats).map((seat, i) => (
-                <h3 key={i}>{seat}</h3>
-            ))}</h2> */}
-                        {/* <h2>Price: {data.amount}</h2> */}
+                        <PayPal/>
                 </>
         );
 }
