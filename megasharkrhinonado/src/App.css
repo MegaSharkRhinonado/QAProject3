@@ -169,14 +169,21 @@ filter: contrast(50%);
 
 
 .pantryDiv {
-  text-align: right;
+  text-align: center;
+  border: solid #555;
+  background-image: url("C:\Users\eli_s\Desktop\GroupMERN\megasharkrhinonado\src\Media\FoodAndDrink\bilbospantry.png");
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  
 }
 
 .headerBP{
   text-align: center;
 }
 .fdTable{
-  border: solid #555;
-
+  color: white;
+  text-align: center;
+  letter-spacing: 1px;
 }
+
 /* FoodAndDrink */
