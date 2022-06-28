@@ -194,12 +194,25 @@ filter: contrast(50%);
 /* Getting There */
 
 /* FoodAndDrink */
+
+.headerBP{
+  text-align: center;
+}
+.fdTable{
+  color: black;
+  text-align: center;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
+
 .pantryDiv {
   text-align: center;
 }
 /* FoodAndDrink */
 
 /* Screen */
+
 
 .screenCards{
   display: flex;
