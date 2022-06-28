@@ -1,11 +1,16 @@
 import { PayPalScriptProvider, PayPalButtons, usePayPalScriptReducer } from "@paypal/react-paypal-js";
 import axios from "axios";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 const style = { "layout": "vertical" };
 const currency = "GBP";
 
 const ButtonWrapper = ({ currency, showSpinner, bookingData }) => {
     const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
+
+    const navigate = useNavigate();
+    const bookingComplete = () => navigate("/BookingConfirmation");
+
 
     useEffect(() => {
         dispatch({
@@ -64,8 +69,12 @@ const ButtonWrapper = ({ currency, showSpinner, bookingData }) => {
                     })
                     .catch(error => {
                         console.log(error);
-                    })
+                    });
+
+                    bookingComplete();
                 })
+
+                
             }}
         />
     </>
