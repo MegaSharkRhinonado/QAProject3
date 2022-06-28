@@ -1,6 +1,6 @@
 import BCard01 from "./BookingsCards/BCard01";
 import BCard02 from "./BookingsCards/BCard02";
-import BC11 from "./BookingsComp/BC11";
+// import BC11 from "./BookingsComp/BC11";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
