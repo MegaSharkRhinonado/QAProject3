@@ -135,5 +135,4 @@ const BC11 = ({ data }) => {
                 </>
         );
 }
-
 export default BC11;
