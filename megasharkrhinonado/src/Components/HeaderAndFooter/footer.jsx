@@ -23,7 +23,7 @@ const Footer = () => {
                         </td>
                         <td>
                             <li><Link to="/Classifications">Classifications</Link></li>
-                            <li><Link to="/">Terms And Conditions</Link></li>
+                            <li><Link to="/TermsAndConditions">Terms And Conditions</Link></li>
                             <li></li>
                         </td>
                         <td>

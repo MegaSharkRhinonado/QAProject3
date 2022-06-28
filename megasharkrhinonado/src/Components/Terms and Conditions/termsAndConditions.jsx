@@ -1,10 +1,10 @@
-import tandc from "./tCcard";
-const termsandconditions = () => {
+import Tandc from "./tCcard";
+const Termsandconditions = () => {
     return ( 
         <>
-            <tandc />
+            <Tandc />
         </>
      );
 }
  
-export default termsandconditions;
+export default Termsandconditions;
