@@ -11,7 +11,7 @@ const Footer = () => {
         {/* about, contact, socials, opening times, geting there, placestogo, class, terms and condish */}
             <div className="footContainer"> 
                
-                <table >
+                <table>
                     <tbody>
                         <td>
                              <Link to="/"><img className="left" src={logo} alt="LOGO" width="100" filter="contrast(100%) "></img></Link>
