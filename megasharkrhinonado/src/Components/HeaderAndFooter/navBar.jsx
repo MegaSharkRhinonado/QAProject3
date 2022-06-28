@@ -6,7 +6,7 @@ const NavBar = () => {
         <>
             <div className="headContainer"> 
                 <Link to="/"><img className="left" src={logo} alt="LOGO" width="200"></img></Link>
-                <h2>QA Cinemas</h2>
+                <h2 style={{fontStyle:"Watcher"}}>QA Cinemas</h2>
                 <div className="navContainer">
                     <Link to="/"><input type="button" value="Home" /></Link>
                     <Link to="/ListingGallery"><input type="button" value = "Listings"></input></Link>
