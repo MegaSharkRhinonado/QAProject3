@@ -18,7 +18,6 @@ const BC11 = ({ data }) => {
         const bookingTime = data.time
         const children = "";
         const seatSelected = [];
-        const bookingData = { amount, movieTitle, bookingDate, bookingTime, children, seatSelected };
 
         const handleDateChange = (event) => {
                 setDateValue(event.target.value);
@@ -59,7 +58,7 @@ const BC11 = ({ data }) => {
 
                 const index = seats.map(object => object.name).indexOf(`${result2}`);
                 console.log("Index:" + index)
-                seats.indexOf(1, {checked: true})
+                seats.indexOf(1, { checked: true })
                 //seats.splice(index, 1);
                 console.log(seats)
                 console.log("Exists:" + data);
@@ -125,7 +124,14 @@ const BC11 = ({ data }) => {
                                         />
                                 ))}
                         </div>
-                        <PayPal bookingData={bookingData}/>
+                        <PayPal
+                                amount={amount}
+                                movieTitle={movieTitle}
+                                bookingDate={bookingDate}
+                                bookingTime={bookingTime}
+                                children={children}
+                                seatSelected={seatSelected}
+                        />
                 </>
         );
 }

@@ -19,7 +19,7 @@ const SEATID_SCHEMA = new Schema({
 const PAYMENT_INFO_SCHEMA = new Schema({
     amount: {
         type: Number,
-        // required: [true, "Payment needs an amount"]
+        required: [true, "Payment needs an amount"]
     },
     paid: {
         type: Boolean
