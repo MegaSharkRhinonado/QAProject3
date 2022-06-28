@@ -3,8 +3,7 @@ import CardsImage from "./CardImage";
 const Cards = (data) => {
     return ( 
         <>
-        <h4>{data.title}</h4>
-        <CardsImage imageUrl={data.imageUrl} imageTitle={data.imageTitle}/>
+            <CardsImage title={data.title} imageUrl={data.imageUrl} imageTitle={data.imageTitle} title2={data.title2} imageUrl2={data.imageUrl2} imageTitle2={data.imageTitle2}/>
         </>
      );
 }
