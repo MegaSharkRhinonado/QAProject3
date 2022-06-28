@@ -12,6 +12,7 @@ const BC11 = ({ data }) => {
         const [timeValue, setTimeValue] = useState("");
         const [dateValue, setDateValue] = useState("");
         const [isChecked, setIsChecked] = useState(seats)
+        const amount = 200;
 
         const handleDateChange = (event) => {
                 setDateValue(event.target.value);
@@ -118,7 +119,7 @@ const BC11 = ({ data }) => {
                                         />
                                 ))}
                         </div>
-                        <PayPal/>
+                        <PayPal amount={amount}/>
                 </>
         );
 }
