@@ -13,6 +13,12 @@ const BC11 = ({ data }) => {
         const [dateValue, setDateValue] = useState("");
         const [isChecked, setIsChecked] = useState(seats)
         const amount = 200;
+        const movieTitle = data.movieTitle;
+        const bookingDate = data.date;
+        const bookingTime = data.time
+        const children = "";
+        const seatSelected = [];
+        const bookingData = { amount, movieTitle, bookingDate, bookingTime, children, seatSelected };
 
         const handleDateChange = (event) => {
                 setDateValue(event.target.value);
@@ -119,7 +125,7 @@ const BC11 = ({ data }) => {
                                         />
                                 ))}
                         </div>
-                        <PayPal amount={amount}/>
+                        <PayPal bookingData={bookingData}/>
                 </>
         );
 }

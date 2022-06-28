@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const style = { "layout": "vertical" };
 const currency = "GBP";
 
-const ButtonWrapper = ({ currency, showSpinner, amount }) => {
+const ButtonWrapper = ({ currency, showSpinner, bookingData }) => {
     const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
     useEffect(() => {
@@ -23,7 +23,7 @@ const ButtonWrapper = ({ currency, showSpinner, amount }) => {
         <PayPalButtons
             style={style}
             disabled={false}
-            forceReRender={[amount, currency, style]}
+            forceReRender={[bookingData.amount, currency, style]}
             fundingSource={undefined}
             createOrder={(data, actions) => {
                 return actions.order
@@ -32,39 +32,35 @@ const ButtonWrapper = ({ currency, showSpinner, amount }) => {
                             {
                                 amount: {
                                     currency_code: currency,
-                                    value: amount,
+                                    value: bookingData.amount,
                                 },
                             },
                         ],
                     })
                     .then((orderId) => {
-                        //Code here after create the order
+                        console.log(orderId);
                         return orderId;
                     });
             }}
             onApprove={function (data, actions) {
-                return actions.order.capture().then(function () {
+                return actions.order.capture().then(function (details) {
+                    const {payer} = details;
+                    console.log({payer})
                     axios.post('http://localhost:3000/bookings/post', {
-                        //Forced Input for testing
-                        movieTitle: 'title',
-                        email: 'email@email.com',
-                        date: '1',
-                        time: '1',
-                        children: '',
-                        seatID: [
-                            {
-                                seatID: 'A1',
-                                price: 21,
-                                booked: true
-                            }
-                        ],
+                        movieTitle: bookingData.movieTitle,
+                        email: details.payer.email_address,
+                        date: bookingData.bookingDate,
+                        time: bookingData.bookingTime,
+                        children: bookingData.children,
+                        seatID: bookingData.seatSelected,
                         payment: [{
-                             amount: 21
+                             amount: bookingData.amount
                         }    
                         ]
                     })
                     .then(response => {
                         console.log(response);
+                        console.log(details)
                     })
                     .catch(error => {
                         console.log(error);
@@ -76,7 +72,7 @@ const ButtonWrapper = ({ currency, showSpinner, amount }) => {
     );
 }
 
-export default function PayPal({ amount }) {
+export default function PayPal({ bookingData }) {
     return (
         <>
             <PayPalScriptProvider options={{
@@ -87,7 +83,7 @@ export default function PayPal({ amount }) {
                 <ButtonWrapper
                     currency={currency}
                     showSpinner={false}
-                    amount={amount}
+                    bookingData={bookingData}
                 />
             </PayPalScriptProvider>
         </>
