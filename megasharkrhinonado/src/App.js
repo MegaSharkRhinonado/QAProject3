@@ -16,7 +16,7 @@ import ContactUs from './Components/ContactUs/contactUs';
 import OpeningTimes from './Components/OpeningTimes/openingTimes';
 import PlacesToGo from './Components/PlacesToGo/placesToGo';
 import BilbosPantry from './Components/FoodAndDrink/bilbosPantry';
-import Termsandconditions from './Components/FoodAndDrink/Termsandconditions';
+import Termsandconditions from './Components/TermsandConditions/termsAndConditions';
 
 function App() {
   return (
