@@ -6,16 +6,17 @@ import { Checkbox } from "./Checkbox";
 
 const BC11 = ({ data }) => {
 
-        const seats = [{ name: "A1", checked: false }, { name: "A2", checked: false }, { name: "A3", checked: false }, { name: "A4", checked: false }, { name: "A5", checked: false }]
+        const seats = [{ name: "A1", checked: false, amount: 10 }, { name: "A2", checked: false, amount: 10 }, { name: "A3", checked: false, amount: 10 }, { name: "A4", checked: false, amount: 10 }, { name: "A5", checked: false, amount: 10 }]
 
         const [available, setAvailable] = useState([]);
         const [timeValue, setTimeValue] = useState("");
         const [dateValue, setDateValue] = useState("");
         const [isChecked, setIsChecked] = useState(seats)
-        const amount = 200;
+        const [amount, setAmount] = useState(0);
+
         const movieTitle = data.movieTitle;
         const bookingDate = data.date;
-        const bookingTime = data.time
+        const bookingTime = data.time;
         const children = "";
 
         const handleDateChange = (event) => {
@@ -27,15 +28,23 @@ const BC11 = ({ data }) => {
         }
 
         const checkHandler = index => {
-                setIsChecked(
-                        isChecked.map((Checked, currentIndex) =>
-                                currentIndex === index
-                                        ? { ...Checked, checked: !Checked.checked }
-                                        : Checked
-                        )
-                )
-
+                const updateChecked = isChecked.map((Checked, currentIndex) =>
+                        currentIndex === index ? !Checked : Checked
+                );
+                setIsChecked(updateChecked);
+                //checkPrice();
         }
+
+
+        const checkPrice = () => {
+                isChecked.filter(seat => seat.checked === true).map(seatFilter => (
+                        console.log(seatFilter.amount),
+                        setAmount(amount += seatFilter.amount)
+                ));
+        }
+
+
+
 
         const checkAvailable = () => {
                 let result;
@@ -79,6 +88,7 @@ const BC11 = ({ data }) => {
         return (
                 <>
                         <h2>Movie Title: {data.movieTitle} </h2>
+                        <h2>Price = {amount} </h2>
                         <h2>Date:</h2>
                         <select id="dateSelected" onChange={handleDateChange}>
                                 {
