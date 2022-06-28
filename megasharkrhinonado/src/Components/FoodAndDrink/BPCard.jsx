@@ -10,14 +10,12 @@ const BPCard01 = () => {
             <div className="content">
                 <h2 className="headerBP">Bilbo's Pantry</h2>
                 <BPComp01 />
-                <div className="pantryDiv">
-               
                     <table className="fdTable">
                         <tbody>
                             <BPComp03 />
                         </tbody>
                     </table>
-                </div>
+               
                <BPComp04 />
             </div>
 
