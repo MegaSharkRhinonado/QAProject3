@@ -7,6 +7,7 @@ import HomePage from './Components/Homepage/homepage';
 import ListingGallery from './Components/ListingGallery/listingGallery';
 import NewReleases from './Components/NewReleases/newReleases';
 import Screens from './Components/Screens/screens';
+import GettingThere from './Components/GettingThere/gettingThere';
 import About from './Components/About/about';
 import Booking from './Components/Bookings/booking';
 import BookingConfirmation from './Components/BookingsConfirmation/bookingConfirmation';
@@ -14,6 +15,7 @@ import Classification from './Components/Classifications/classification';
 import ContactUs from './Components/ContactUs/contactUs';
 import OpeningTimes from './Components/OpeningTimes/openingTimes';
 import PlacesToGo from './Components/PlacesToGo/placesToGo';
+import BilbosPantry from './Components/FoodAndDrink/bilbosPantry';
 
 function App() {
   return (
@@ -33,6 +35,8 @@ function App() {
           <Route path ="/OpeningTimes" element={<OpeningTimes />} />
           <Route path ="/PlacesToGo" element={<PlacesToGo />} />
           <Route path ="/Screens" element={<Screens />} />
+          <Route path ="/GettingThere" element={<GettingThere />} />
+          <Route path ="/FoodAndDrink" element={<BilbosPantry />} />
         </Routes>
         <Footer />
       </Router>

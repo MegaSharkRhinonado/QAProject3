@@ -6,13 +6,15 @@ const NavBar = () => {
         <>
             <div className="headContainer"> 
                 <Link to="/"><img className="left" src={logo} alt="LOGO" width="200"></img></Link>
-                <h2>QA Cinemas</h2>
+                <h2 style={{fontStyle:"Watcher"}}>QA Cinemas</h2>
                 <div className="navContainer">
                     <Link to="/"><input type="button" value="Home" /></Link>
                     <Link to="/ListingGallery"><input type="button" value = "Listings"></input></Link>
                     <Link to="/NewReleases"><input type="button" value = "New Releases"></input></Link>
                     <Link to="/Screens"><input type="button" value = "Screens"></input></Link>
+                    <Link to="/FoodAndDrink"><input type="button" value = "Bilbo's Pantry"></input></Link>
                     <Link to="/Forums"><input type="button" value = "Forum"></input></Link>
+                    
                 </div>
             </div >
         </>

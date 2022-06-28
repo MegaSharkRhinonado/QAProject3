@@ -10,9 +10,12 @@ const Footer = () => {
         <>
         {/* about, contact, socials, opening times, geting there, placestogo, class, terms and condish */}
             <div className="footContainer"> 
-                <Link to="/"><img className="left" src={logo} alt="LOGO" width="100"></img></Link>
+               
                 <table >
                     <tbody>
+                        <td>
+                             <Link to="/"><img className="left" src={logo} alt="LOGO" width="100" filter="contrast(100%) "></img></Link>
+                        </td>
                         <td>
                             <li><Link to="/About">About Us</Link></li>
                             <li><Link to="/ContactUs">Contact Us</Link></li>
@@ -24,7 +27,7 @@ const Footer = () => {
                             <li></li>
                         </td>
                         <td>
-                            <li><Link to="/">Getting Here?</Link></li>
+                            <li><Link to="/GettingThere">Getting Here?</Link></li>
                             <li><Link to="/PlacesToGo">Whats Local</Link></li>
                             <li></li>
                         </td>
