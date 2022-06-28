@@ -257,6 +257,13 @@ tbody>td {
 
 /* T And C */
 .tANDc{
-  padding:4%;
+  margin:4%;
+  padding:2%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.tANDc > h2{
+  font-size: 2em;
 }
 /* T And C */
