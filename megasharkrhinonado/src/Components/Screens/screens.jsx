@@ -4,7 +4,7 @@ const Screens = () => {
     return ( 
         <>
             <div className="content">
-                <h2>Screens</h2>
+                <h1 style={{textAlign:'center'}}>Screens</h1>
                 <ScreenCards />
             </div>
             

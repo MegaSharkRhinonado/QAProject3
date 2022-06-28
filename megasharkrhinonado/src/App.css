@@ -136,9 +136,10 @@ td>tr {
 /* Footer */
 .footContainer {
   background-color: #2d2d2d;
-  padding: 4px;
-  list-style-type: none;
-  height: 10vh;
+  padding:1%;
+  list-style-type:none;
+  height: 17vh;
+
 }
 
 .footContainer>table {
@@ -214,11 +215,23 @@ tbody>td {
 
 /* FoodAndDrink */
 
+.headerBP{
+  text-align: center;
+}
+.fdTable{
+  color: black;
+  text-align: center;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+}
 
 .pantryDiv {
   text-align: center;
 }
+/* FoodAndDrink */
 
+/* Screen */
 
 /* FoodAndDrink */
 
@@ -233,3 +246,12 @@ tbody>td {
 }
 
 /* SlideShow CSS */
+
+.screenCards{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Screen */
+
