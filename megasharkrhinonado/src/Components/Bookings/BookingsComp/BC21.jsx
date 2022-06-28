@@ -6,5 +6,4 @@ const BC21 = ({ seatNum, value, onChange }) => {
        </>
      );
 }
-
 export default BC21;
