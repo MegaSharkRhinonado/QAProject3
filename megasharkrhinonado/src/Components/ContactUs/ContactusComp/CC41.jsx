@@ -3,36 +3,43 @@ const CC41 = () => {
     return ( 
         <>
                 <center>
-                        <div>
-                                <label>
-                                <br />Name</label>
-                                <br /> <input type="text" id="name" />
-                        </div>
+                        <form method="post" action="mailto:eli_stribley@hotmail.com">
+                                <div>
+                                        <label>Your Full Name*:</label>
+                                        <br /> <input type="text" id="name" style={{maxWidth:"250px",width:"100%"}}/>
+                                </div>
 
-                        <div>
-                                <label>
-                                <br />Email</label>
-                                <br /> <input type="text" id="email" />
-                        </div>
+                                <div>
+                                        <label>Email Address*:</label>
+                                        <br /> <input type="text" id="email" style={{maxWidth:"250px",width:"100%"}}/>
+                                </div>
 
-                        <div >
-                                <label>
-                                <br />PhoneNumber</label>
-                                <br /> <input type="number" id="phoneNumber" />
-                        </div>
+                                <div >
+                                        <label>Phone Number:</label>
+                                        <br /> <input type="number" id="phoneNumber" style={{maxWidth:"250px",width:"100%"}}/>
+                                </div>
 
-                        <div>
-                                <label>
-                                <br />Topic</label>
-                                <br /> <input type="text" id="topic" />
-                        </div>
+                                <div>
+                                        <label for="lang">Topic:</label>
+                                        <br />
+                                        <select name="Topics" id="lang" style={{maxWidth:"250px",width:"100%"}}>
+                                                <option value="Movie">Movie Enquiries</option>
+                                                <option value="Seating">Seating Enquiries</option>
+                                                <option value="Accessability">Accessability Enquiries</option>
+                                                <option value="Allergens">Allergen Enquiries</option>
+                                                <option value="Other">Other </option>
+                                        </select>
+                                </div>
 
-                        <div>
-                        <label>Description</label>
-                                <br />
-                                <textarea type="text" class="CEN" id="creatureNotes" />
-                        
-                        </div>
+                                <div>
+                                        <label>Message:</label>
+                                        <br />
+                                        <textarea rows="10" cols="50" type="text" class="CEN" id="message"/>
+
+                                        
+                                </div>
+                                <input type="submit" name="Submit" value="Send Email" />
+                        </form>
                 </center>
                 
                 

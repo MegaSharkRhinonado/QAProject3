@@ -5,6 +5,7 @@ const About = () => {
         <>
             <div className="content">
                 <ACard01 />
+   
             </div> 
         </>
      );
