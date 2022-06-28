@@ -37,14 +37,14 @@ const BOOKINGS_SCHEMA = new Schema({
         required: [true, "Booking needs an Email"]
     },
     date: {
-        type: Date,
+        type: String,
         required: [true, "Booking needs a Date"]
     },
     time: {
         type: String,
         required: [true, "Booking needs a Time"]
     },
-    childeren: {
+    children: {
         type: Number
     },
     seatID: [SEATID_SCHEMA],
