@@ -320,3 +320,40 @@ tbody>td {
   justify-content: left;
   text-align: left;
 }
+
+/* forums */
+
+#questions{
+  float: left;
+  width: 99.65%;
+  margin: 0px 0px 0px 0%;
+  border: 5px solid #555;
+}
+#textStyle{
+  float: left;
+  margin: 0px 0px 0px 8%;
+  height: 40%;
+  width: 40%;
+}
+.faqCards{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin:1% 5% 0 5%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+/* forums */
+
+/* board */
+
+.board{
+  margin:1% 5% 0 5%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+/* board */
