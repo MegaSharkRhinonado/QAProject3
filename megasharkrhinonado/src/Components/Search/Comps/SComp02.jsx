@@ -1,32 +1,24 @@
 import SComp03 from "./SComp03";
-import axios from "axios";
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 
 const SComp02 = () => {
 
     const [listings, setListings] = useState([]);
 
-    const getListings = () => {
-        axios.get("http://localhost:3000/movies/getAll")
-            .then(response => {
-                setListings(response.data)
-            }).catch((exception) => {
-                console.log(exception);
-            });
+    const [filteredLisitings, setFilteredListings] = useState(listings);
+
+    const handleSearch = (query, e) =>{
+
+        e.preventDefault();
+        setFilteredListings(listings.filter(listing => listing.data.search(query) != -1));
     }
-
-    useEffect(() => {
-        getListings();
-    }, []);
-
                 return (
                 <>
                 <div className="content">
-                    {
-                        listings.map(listing =>
-                            <SComp03 data={listing} key={listing.id} />
-                        )
-                    }
+                    <SComp03 handleSearch={handleSearch} />
+                    <ul>
+                    {filteredLisitings.map(listing => <SComp03 key={listing.data} name={listing.data} />)}    
+                    </ul>   
                 </div>
                 </>
                 );
