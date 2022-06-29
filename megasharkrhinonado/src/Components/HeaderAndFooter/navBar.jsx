@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import React from 'react';
 import logo from '../../Media/Nav/LOGO.png';
+import SearchBar from '../Search/SearchBar';
 const NavBar = () => {
     return ( 
         <>
@@ -14,6 +15,7 @@ const NavBar = () => {
                     <Link to="/Screens"><input type="button" value = "Screens"></input></Link>
                     <Link to="/FoodAndDrink"><input type="button" value = "Bilbo's Pantry"></input></Link>
                     <Link to="/Forums"><input type="button" value = "Forum"></input></Link>
+                    <SearchBar />
                     
                 </div>
             </div >
