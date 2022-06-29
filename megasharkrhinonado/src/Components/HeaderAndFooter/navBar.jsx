@@ -16,7 +16,6 @@ const NavBar = () => {
                     <Link to="/FoodAndDrink"><input type="button" value = "Bilbo's Pantry"></input></Link>
                     <Link to="/Forums"><input type="button" value = "Forum"></input></Link>
                     <SearchBar />
-                    
                 </div>
             </div >
         </>

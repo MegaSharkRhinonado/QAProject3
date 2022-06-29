@@ -1,26 +1,26 @@
-import {useState, List} from 'react'
-import axios from 'axios'
+import React from 'react';
 
-const SComp01 = () => {
-    const [contacts, setContacts] = useState([])
-    const [search, setSearch] = useState('')
 
-    const filteredContacts = search.length === 0 ? contacts : 
-    contacts.filter(contact => contact.full_name.
-                toLowerCase().includes(search.toLowerCase()))
+export default function SComp01(props) {
 
     return (
-        <div>
-            <h3>SEARCH</h3>
-                <input 
-                    type="text" 
-                    placeholder="Search name" 
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+        <>
+            <div>
+                <form action='/' method='get'>
+                    <label htmlFor='header-search'>
+                        <span className='visually-hidden'>Search Manga Titles</span>
+                    </label>
+                    <input
+                        className=''
+                        type='text'
+                        id='header-search'
+                        placeholder='Search Cinema Titles'
+                        name='Search Bar for Cinema Titles'
+                        onChange={""}
                     />
-            <List contacts={filteredContacts}/>
-        </div>
-    )
-}
-
-export default SComp01;
+                    <button className="SearchButton" type='button'></button>
+                </form>
+            </div>
+        </>
+    );
+};

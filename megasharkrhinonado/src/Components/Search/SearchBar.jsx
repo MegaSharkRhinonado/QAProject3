@@ -1,35 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
+import SCard01 from './Cards/SCard01';
 
 
 const SearchBar = () => {
-    const [searchInput, setSearchInput] = useState("");
+    return (
+        <>
+            <SCard01 />
 
-    const keywords = [
-        { name: "Towers",},
-        { name: "Ring",},
-        { name: "Lord",},
-        { name: "King",},
-        { name: "Towers",},
-    ]
-    const handleChange = (e) => {
-        e.preventDefault();
-        setSearchInput(e.target.value);
-    };
-
-    
-
-    
-    return <div>
-        <input
-            type="search"
-            placeholder="Search here"
-            onChange={handleChange}
-            value={searchInput} />
-        <table>
-            <tr>
-                <th></th>
-            </tr>
-        </table>
-    </div>
+        </>
+    )
 };
 export default SearchBar;
