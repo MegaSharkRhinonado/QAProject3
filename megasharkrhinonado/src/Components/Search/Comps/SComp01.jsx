@@ -1,14 +1,14 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 
 export default function SComp01(props) {
 
     return (
         <>
-            <div>
+           
                 <form action='/' method='get'>
                     <label htmlFor='header-search'>
-                        <span className='visually-hidden'>Search Manga Titles</span>
+                        <span className='visually-hidden'>Search Cinema Titles</span>
                     </label>
                     <input
                         className=''
@@ -18,9 +18,9 @@ export default function SComp01(props) {
                         name='Search Bar for Cinema Titles'
                         onChange={""}
                     />
-                    <button className="SearchButton" type='button'></button>
+                    <Link to="/Search"><button style={{width:"1%"}} type='button'></button></Link>
                 </form>
-            </div>
+            
         </>
     );
 };

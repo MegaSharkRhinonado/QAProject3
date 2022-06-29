@@ -1,4 +1,5 @@
-import SComp01 from "../Comps/SComp01";
+
+import SComp02 from "../Comps/SComp02";
 
 
 const SCard01 = () => {
@@ -6,7 +7,8 @@ const SCard01 = () => {
 
     return (
         <>
-                    <SComp01 />
+            
+            <SComp02 />
         </>
     )
 }

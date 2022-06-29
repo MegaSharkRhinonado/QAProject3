@@ -279,5 +279,8 @@ tbody>td {
   width: 1px;
   
 }
+.ResultList{
+  text-align: left;
+}
 
 /* Search */
