@@ -6,35 +6,76 @@ import { Checkbox } from "./Checkbox";
 
 const BC11 = ({ data }) => {
 
-        const seats = [{ name: "A1", checked: false }, { name: "A2", checked: false }, { name: "A3", checked: false }, { name: "A4", checked: false }, { name: "A5", checked: false }]
+        const seats = [{ name: "A1", checked: false, price: 10.00 }, { name: "A2", checked: false, price: 10.00 }, { name: "A3", checked: false, price: 10.00 }, { name: "A4", checked: false, price: 10.00 }, { name: "A5", checked: false, price: 10.00 }]
 
         const [available, setAvailable] = useState([]);
         const [timeValue, setTimeValue] = useState("");
+        const [childValue, setChildValue] = useState(0);
         const [dateValue, setDateValue] = useState("");
         const [isChecked, setIsChecked] = useState(seats)
-        const amount = 200;
+        const [amount, setAmount] = useState(0);
+        const [childArray, setChildArray] = useState([]);
+
         const movieTitle = data.movieTitle;
         const bookingDate = data.date;
-        const bookingTime = data.time
+        const bookingTime = data.time;
         const children = "";
-        const seatSelected = [];
+        let maxChildren = 0;
 
         const handleDateChange = (event) => {
-                setDateValue(event.target.value);
+                setDateValue(previosState => {
+                        return previosState = event.target.value;
+                })
         }
 
         const handleTimeChange = (event) => {
                 setTimeValue(event.target.value);
         }
 
-        const checkHandler = index => {
-                setIsChecked(
-                        isChecked.map((Checked, currentIndex) =>
-                                currentIndex === index
-                                        ? { ...Checked, checked: !isChecked.checked }
-                                        : isChecked
-                        )
-                )
+        const handleChildrenChange = (event) => {
+                setChildValue(event.target.value);
+        }
+
+        const checkHandler = (index) => {
+                const updateChecked = isChecked.map((Checked, currentIndex) =>
+                        currentIndex === index ? !Checked : Checked
+                );
+
+                setIsChecked(updateChecked);
+                checkPrice();
+                checkChildren();
+                childrenList();
+        }
+
+        const checkPrice = () => {
+                let total = 0;
+                for (let i = 0; i < isChecked.length; i++) {
+                        if (isChecked[i] === true) {
+                                total += seats[i].price;
+                                console.log(total)
+                        }
+                }
+                setAmount(total)
+        }
+
+        const checkChildren = () => {
+                maxChildren = 0;
+                for (let i = 0; i < isChecked.length; i++) {
+                        if (isChecked[i] === true) {
+                                maxChildren++
+                        }
+                }
+                console.log("Children" + maxChildren)
+        }
+
+        const childrenList = () => {
+                let selected = [];
+                if (maxChildren > 0) {
+                        for (let i = 1; i <= maxChildren; i++) {
+                                selected.push(i);
+                        }
+                }
+                setChildArray(selected);
         }
 
         const checkAvailable = () => {
@@ -46,31 +87,32 @@ const BC11 = ({ data }) => {
                         console.log("Checking2");
                         result = data.seatID;
                         console.log("result" + result)
-                }
-                )
+                })
 
                 result?.map(data => {
                         console.log(data.seatID);
                         result2 = data.seatID;
-                }
-                )
+                })
 
-
-                const index = seats.map(object => object.name).indexOf(`${result2}`);
+                const index = isChecked.map(object => object.name).indexOf(`${result2}`);
                 console.log("Index:" + index)
-                seats.indexOf(1, { checked: true })
-                //seats.splice(index, 1);
-                console.log(seats)
+                isChecked.indexOf(1, { checked: true })
+                checkHandler(index);
+                console.log(isChecked)
                 console.log("Exists:" + data);
         }
 
         useEffect(() => {
                 seatAvailable(timeValue, dateValue);
                 checkAvailable();
+                checkChildren();
+                console.log("Children" + maxChildren)
+                //reset seat state
         }, [timeValue, dateValue])
 
         const seatAvailable = (time, date) => {
-                console.log(dateValue);
+                console.log("Date:" + dateValue);
+                console.log("Time:" + timeValue)
                 axios.get(`http://localhost:3000/bookings/get/${data.movieTitle}/${date}/${time}`)
                         .then(response => {
                                 setAvailable(response.data)
@@ -82,6 +124,7 @@ const BC11 = ({ data }) => {
         return (
                 <>
                         <h2>Movie Title: {data.movieTitle} </h2>
+                        <h2>Price = {amount} </h2>
                         <h2>Date:</h2>
                         <select id="dateSelected" onChange={handleDateChange}>
                                 {
@@ -108,9 +151,13 @@ const BC11 = ({ data }) => {
                                 <br /> <input type="text" id="email" />
                         </div>
                         <div >
-                                <label>
-                                        <br />Children</label>
-                                <br /> <input type="number" id="children" />
+                                <label><br />Children</label><br />
+                                <select id="childrenList" onChange={handleChildrenChange}>
+                                        {
+                                                childArray.map((entry, i) => (
+                                                        <option key={i} value={entry}>{entry}</option>
+                                                ))}
+                                </select>
                         </div>
 
                         <div>
@@ -130,7 +177,7 @@ const BC11 = ({ data }) => {
                                 bookingDate={bookingDate}
                                 bookingTime={bookingTime}
                                 children={children}
-                                seatSelected={seatSelected}
+                                seatSelected={isChecked}
                         />
                 </>
         );
