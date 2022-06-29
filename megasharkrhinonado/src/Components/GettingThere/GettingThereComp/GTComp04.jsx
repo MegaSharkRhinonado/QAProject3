@@ -1,18 +1,21 @@
 const GTComp04 = () => {
     return(
         <>
-        <div>
-        <h4>Very limited parking spaces, we advise you travel here by horse!</h4>
-        <h4>There are plenty of public transport carriage so you can visit us safely. Carriages stop are at the following:</h4>
-        <ul>
-        <h5>Michel Delving</h5>
-        <h5>Bree</h5>
-        <h5>Rivendell</h5>
-        <h5>Caras Galadhon</h5>
-        <h5>Helm's Deep</h5>
-        <h5>Minas Tirith</h5>
-        <h4>We can't wait to see you!</h4>
-        </ul>
+        <div className="PTGDivs">
+        <p><strong>Very limited parking spaces, we advise you travel here by horse!</strong>
+        <br/><br/>
+        <strong>There are plenty of public transport carriage so you can visit us safely. Carriages stop are at the following:</strong></p>
+        <li style={{listStyleType:"none"}}>
+                <h4>
+                    <ul>Michel Delving</ul>
+                    <ul>Bree</ul>
+                    <ul>Rivendell</ul>
+                    <ul>Caras Galadhon</ul>
+                    <ul>Helm's Deep</ul>
+                    <ul>Minas Tirith</ul>
+                    <h4>We can't wait to see you!</h4>
+                </h4>
+            </li>
         </div>
         </>
     )
