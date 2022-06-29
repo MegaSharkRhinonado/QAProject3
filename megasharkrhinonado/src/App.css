@@ -104,7 +104,9 @@ input:active {
 
 /* ABOUTPAGE */
 .aboutContent {
-  margin: 1%;
+  margin-left: 20%;
+  margin-right:20%;
+  margin-bottom: 2%;
   padding: 2%;
   border-style: solid;
   border-color: rgb(0, 0, 0, 0.5);
@@ -267,3 +269,19 @@ tbody>td {
   font-size: 2em;
 }
 /* T And C */
+
+/* Contact */
+#contact{
+  font-size: 2em;
+  text-align: center;
+  margin-left:40%;
+  margin-right:40%;
+  margin-bottom:5%;
+  margin-top:5%;
+  padding: 2%;
+  border-style: solid;
+  border-color: #464646;
+  background-color: gold;
+  width:20%;
+}
+/* Contact */

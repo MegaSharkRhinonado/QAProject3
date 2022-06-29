@@ -16,14 +16,11 @@ const AC01 = () => {
                 <tr><a href='https://www.reddit.com/r/lotr/'><img className="left" src={Reddit} alt="Reddit" width="40"></img></a></tr>
             </td>
           </table>
-          <h2>Scrum Lord Glory Be to Dictator James</h2>
+          <h2>Scrum Master - James Long</h2>
           
           {/* change what is in the text for what is needed */}
-          <p> Description ect : Nothing is possible unless one will commands, a will which has to be obeyed by others,
-              beginning at the top and ending only at the very bottom. This is the expression of an
-              authoritarian state – not of a weak, babbling democracy – of an authoritarian state where
-              everyone is proud to obey, because he knows: I will likewise be obeyed when I must take
-              command</p>
+          <h4>Extra information about James: </h4>
+          <p>Info Info Info</p>
 
         </div>
       </>
