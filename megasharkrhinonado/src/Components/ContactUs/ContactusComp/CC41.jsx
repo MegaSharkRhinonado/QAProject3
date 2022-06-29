@@ -1,8 +1,13 @@
 import { getValue } from "@testing-library/user-event/dist/utils";
 
 import React from 'react';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import emailValidation from './EmailValidation';
+
+
+
+
+
+
+
 
 
 const CC41 = () => {
@@ -17,7 +22,7 @@ const CC41 = () => {
 
                                         <div>
                                                 <label>Email Address*:</label>
-                                                <br /> <input type="text" name="email" id="email" style={{ maxWidth: "250px", width: "100%" }} />
+                                                <br /> <input type="email" name="email" id="email" style={{ maxWidth: "250px", width: "100%" }} />
                                         </div>
 
                                         <div >
