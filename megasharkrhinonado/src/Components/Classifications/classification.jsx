@@ -1,10 +1,10 @@
-import CCard01 from "./ClassificationCards/CCard01";
+import ClassList from "./classlist";
 
 const Classification = () => {
     return ( 
         <>
             <div className="content">
-                <CCard01 />
+                <ClassList />
             </div>
         </>
      );

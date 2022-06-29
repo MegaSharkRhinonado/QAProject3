@@ -314,3 +314,9 @@ tbody>td {
   padding:2%;
 }
 /* homepage */
+
+.classcards{
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
