@@ -12,7 +12,7 @@ const LGC01 = ({ data }) => {
             </div>
 
             <h2>showing times</h2>
-            <h3>{data.movieShowings}</h3>
+            {/* <h3>{data.movieShowings}</h3> */}
             <h2>directors and actors test 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus esse voluptatibus maxime neque, molestiae, nulla voluptatum soluta perferendis quasi magni voluptas aliquid velit distinctio, at quos voluptates ea minus temporibus.</h2>
             <Link to={`/Booking/${data._id}`}><button>Book Tickets!</button></Link>
         </>
