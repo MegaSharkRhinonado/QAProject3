@@ -301,4 +301,16 @@ tbody>td {
   color: rgb(170, 142, 43);
   text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.7);
 }
+
+#images{
+  margin-left:8%;
+  margin-right:8%;
+  border-style: solid;
+  border-color: #4646467c;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#images > img{
+  padding:2%;
+}
 /* homepage */

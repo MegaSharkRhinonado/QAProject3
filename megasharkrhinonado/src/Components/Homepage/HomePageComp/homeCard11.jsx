@@ -8,10 +8,11 @@ const homeCard11 = () => {
     return ( 
         <>
         {/* alter the alt tag for what is needed */}
-        <img src={image01} alt="PictureOfCinema" width="20%"/>
-        <img src={image02} alt="PictureOfCinema" width="20%"/>
-        <img src={image03} alt="PictureOfCinema" width="20%"/>
-        
+        <div id="images">
+          <img src={image01} alt="PictureOfCinema" width="20%"/>
+          <img src={image02} alt="PictureOfCinema" width="20%"/>
+          <img src={image03} alt="PictureOfCinema" width="20%"/>
+        </div>
        </>
      );
 }

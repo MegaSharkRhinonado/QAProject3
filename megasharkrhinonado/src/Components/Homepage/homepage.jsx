@@ -9,7 +9,8 @@ const HomePage = () => {
                         <tr style={{
                         float: 'left',
                         margin: '0px 0px 0px 0%',
-                        paddingBottom: '1.75%'
+                        paddingBottom: '1.75%',
+                        fontSize:"small"
                         }}>
 
                             <HPMainCard01 />
