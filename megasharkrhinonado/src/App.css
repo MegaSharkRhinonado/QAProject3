@@ -104,7 +104,9 @@ input:active {
 
 /* ABOUTPAGE */
 .aboutContent {
-  margin: 1%;
+  margin-left: 20%;
+  margin-right:20%;
+  margin-bottom: 2%;
   padding: 2%;
   border-style: solid;
   border-color: rgb(0, 0, 0, 0.5);
