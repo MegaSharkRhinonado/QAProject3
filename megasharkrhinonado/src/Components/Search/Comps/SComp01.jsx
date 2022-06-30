@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
 const SComp01 = ({ handleSearch }) => {
@@ -12,7 +11,7 @@ const SComp01 = ({ handleSearch }) => {
         <>
            
                 <form onSubmit={(e) => handleSearch(query, e)}>
-                    <label htmlFor='header-search'>
+                    <label htmlFor='nav-search'>
                         <span className='visually-hidden'>Search Cinema Titles</span>
                     </label>
                     <input
@@ -21,7 +20,7 @@ const SComp01 = ({ handleSearch }) => {
                         onChange={handleChange}
                         defaultValue={query}
                     />
-                    <Link to="/Search"><button handleSearch={handleSearch} style={{width:"1%"}} type='button'></button></Link>
+                    <button type='submit'>Search</button>
                 </form>
             
         </>

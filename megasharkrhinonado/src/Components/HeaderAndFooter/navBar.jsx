@@ -2,11 +2,12 @@ import { Link } from 'react-router-dom'
 import React from 'react';
 import logo from '../../Media/Nav/LOGO.png';
 import SComp01 from '../Search/Comps/SComp01';
+
 const NavBar = () => {
     return ( 
         <>
             <div className="headContainer"> 
-                <Link to="/"><img className="left" src={logo} alt="LOGO" width="200"></img></Link>
+                <Link to="/HomePage"><img className="left" src={logo} alt="LOGO" width="200"></img></Link>
                 <h2 style={{fontStyle:"Watcher"}}>QA Cinemas</h2>
                 <div className="navContainer">
                     <Link to="/HomePage"><input type="button" value="Home" /></Link>
