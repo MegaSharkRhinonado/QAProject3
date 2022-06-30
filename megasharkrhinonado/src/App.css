@@ -366,5 +366,14 @@ tbody>td {
   border-color: rgb(0, 0, 0, 0.2);
   background-color: rgba(255, 255, 255, 0.6);
 }
-
 /* PaymentDivs */
+
+/* menu div */
+.menu{
+  margin:4% 22% 4% 22%;
+  padding: 1%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(101, 33, 1, 0.6);
+}
+/* menu div */
