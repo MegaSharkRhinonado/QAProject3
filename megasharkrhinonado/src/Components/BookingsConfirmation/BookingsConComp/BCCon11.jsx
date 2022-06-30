@@ -16,7 +16,8 @@ let price = "testPrice";
 
 const BCCon11 = ({data}) => {
 
-        console.log("test1 BCCon11 " + {data});
+        console.log("test1 BCCon11 " + data);
+
     const sendEmail = (e) => {
         e.preventDefault();
     

@@ -8,6 +8,8 @@ const currency = "GBP";
 const ButtonWrapper = ({ id, currency, showSpinner, amount, movieTitle, bookingDate, bookingTime, children, seatSelected }) => {
     const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
+    console.log("this is reading Button Wrapper" + bookingDate +  bookingTime +  seatSelected);
+
     const navigate = useNavigate();
     const bookingComplete = () => navigate(`/BookingConfirmation/${id}`);
 
@@ -64,7 +66,7 @@ const ButtonWrapper = ({ id, currency, showSpinner, amount, movieTitle, bookingD
                         ]
                     })
                         .then(response => {
-                            console.log(response);
+                            console.log("THIS IS A RESPONSE PLEASE WORK " + response);
                             console.log(details)
                         })
                         .catch(error => {

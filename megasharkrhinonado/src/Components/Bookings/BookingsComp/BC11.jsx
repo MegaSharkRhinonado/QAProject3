@@ -175,9 +175,9 @@ const BC11 = ({ data }) => {
                                 id={data._id}
                                 amount={amount}
                                 movieTitle={movieTitle}
-                                bookingDate={bookingDate}
-                                bookingTime={bookingTime}
-                                children={children}
+                                bookingDate={dateValue}
+                                bookingTime={timeValue}
+                                children={childValue}
                                 seatSelected={isChecked}
                         />
                 </>

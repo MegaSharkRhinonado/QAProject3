@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const SEATID_SCHEMA = new Schema({
-    seatID: {
+    name: {
         type: String,
         required: [true, "Seat needs an ID"]
     },
@@ -10,7 +10,7 @@ const SEATID_SCHEMA = new Schema({
         type: Number,
         required: [true, "Seat needs a price"]
     },
-    booked: {
+    checked: {
         type: Boolean,
         required: [true, "Seat needs a booked value"]
     }
