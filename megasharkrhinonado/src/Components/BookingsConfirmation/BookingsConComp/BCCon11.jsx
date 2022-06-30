@@ -1,4 +1,7 @@
 
+import emailjs from "emailjs-com";
+import React from 'react';
+
 // Please change and set these to what they should show
 let movieTitle = "testtitle1";
 let date = "testDate";
@@ -11,13 +14,35 @@ let seats = ["testSeat1","testSeat2"];
 let price = "testPrice";
 
 
-const BCCon11 = () => {
+const BCCon11 = ({data}) => {
+
+        console.log("test1 BCCon11 " + {data});
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('gmail', 'template_l2nzbsn', e.current, 'HSU53k5NtBnpmCHyg')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset();
+      };
+
     return (
         <>
+
+        <form onSubmit={sendEmail}>
+
+
+
+        </form>
+
+
             <h2>Booking Confirmed!</h2>
-            <h2>Movie Title: {movieTitle} </h2>
-            <h2>Date: {date}</h2>
-            <h2>Time: {time}</h2>
+            <h2>Movie Title: {data.movieTitle} </h2>
+            <h2>Date: {data.date}</h2>
+            <h2>Time: {data.time}</h2>
             <div>
                     <label>
                     <br />Name
