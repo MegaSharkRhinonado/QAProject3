@@ -22,7 +22,7 @@ const SComp01 = ({ handleSearch }) => {
            
                 <form onSubmit={(e) => handleSearch(query, e)}>
                     <label htmlFor='nav-search'>
-                        <span className='visually-hidden'>Search Cinema Titles</span>
+                        <span className='visually-hidden'></span>
                     </label>
                     <input
                         name= 'search'

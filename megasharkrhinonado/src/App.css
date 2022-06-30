@@ -255,32 +255,11 @@ tbody>td {
 
 /* Screen */
 
-/* T And C */
-.tANDc{
-  margin:4%;
-  padding:2%;
-  border-style: solid;
-  border-color: rgb(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.6);
-}
-.tANDc > h2{
-  font-size: 2em;
-}
-/* T And C */
-/* Search */
+/* SearchBar */
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  
-}
-.ResultList{
-  text-align: left;
+.results{
+  border: solid #555;
+  text-align: center;
 }
 
-/* Search */
+/* SearchBar */

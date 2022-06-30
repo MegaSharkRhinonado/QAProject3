@@ -28,7 +28,6 @@ const SComp02 = () => {
     }, []);
 
     const handleSearch = (data) => {
-        
         console.log(data)
         const filtered = data.filter(listing => (listing.movieTitle.search(params.data) != -1));
         setFilteredListings(filtered);
@@ -49,7 +48,15 @@ const SComp02 = () => {
                 <ul>
                     {filteredLisitings.map(listing => {
                         console.log(listing);
-                        return <p>{listing.movieTitle}</p>
+                        return (
+                        <>
+                        <div className="results">
+                        <h3>{listing.movieTitle}</h3>
+                        <p>{listing.description}</p>
+                        <h4>{listing.rating}</h4>
+                        </div>
+                        </>
+                        )
                     })}
                     {/* {filteredLisitings.map(listing => <SComp03 key={listing} name={listing} />)} */}
                 </ul>

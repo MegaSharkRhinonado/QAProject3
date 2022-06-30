@@ -12,6 +12,7 @@ console.log(data)
         <div className="searchPageResults">
             <li>{data.movieTitle}</li>
             <li>{data.description}</li>
+            <li>{data.rating}</li>
         </div>
         </>
     )
