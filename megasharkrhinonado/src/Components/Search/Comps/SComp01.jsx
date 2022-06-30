@@ -1,12 +1,22 @@
 import React from 'react';
-import { useState } from 'react'
+import { useRef } from 'react';
+import { useState, Link } from 'react'
+import { renderMatches, useNavigate } from 'react-router-dom';
+
 
 const SComp01 = ({ handleSearch }) => {
 
     let [query, setQuery] = useState("");
 
-    const handleChange = (event) => setQuery(event.target.value);
+    //const handleChange = () => setQuery(searchInput.current.value);
+    const navigate = useNavigate();
+    const handleChange = () => navigate(`/SearchBar/${searchInput.current.value}`)
 
+    const searchInput = useRef();
+
+    console.log(query)
+    
+    
     return (
         <>
            
@@ -15,12 +25,13 @@ const SComp01 = ({ handleSearch }) => {
                         <span className='visually-hidden'>Search Cinema Titles</span>
                     </label>
                     <input
-                        type='search'
+                        name= 'search'
+                        ref={searchInput}
+                        type='text'
                         placeholder='Search Cinema Titles'
-                        onChange={handleChange}
-                        defaultValue={query}
+                        
                     />
-                    <button type='submit'>Search</button>
+                   <button onClick={handleChange} type="button">Search</button>
                 </form>
             
         </>

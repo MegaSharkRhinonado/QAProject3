@@ -40,7 +40,7 @@ function App() {
           <Route path ="/GettingThere" element={<GettingThere />} />
           <Route path ="/FoodAndDrink" element={<BilbosPantry />} />
           <Route path ="/TermsAndConditions" element={<Termsandconditions />} />
-          <Route path ="/SearchBar" element={<SearchBar />} />
+          <Route path ="/SearchBar/:data" element={<SearchBar />} />
 
         </Routes>
         <Footer />

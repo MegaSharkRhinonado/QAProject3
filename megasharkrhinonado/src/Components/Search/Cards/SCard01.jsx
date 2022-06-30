@@ -8,6 +8,7 @@ const SCard01 = () => {
     return (
         <>
             <div className="content">
+            
             <SComp02 />
             </div>
         </>
