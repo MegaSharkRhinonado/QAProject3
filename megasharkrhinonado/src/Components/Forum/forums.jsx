@@ -10,18 +10,19 @@ const Forums = () => {
     const [movies, setMovies] = useState([]);
     const [reviews, setReviews] = useState(movies);
     const [titles, setTitles] = useState([]);
-    const testArray = ["1", "2", "3"];
 
     const getMovie = () => {
         axios.get("http://localhost:3000/movies/getAll")
             .then(response => {
                 setMovies(response.data)
+                getReview(response.data);
+                getTitle(response.data);
             }).catch((exception) => {
                 console.log(exception);
             });
     }
 
-    const getReview = () => {
+    const getReview = (reviews) => {
         let selected = reviews
         for (let i = 1; i <= reviews; i++) {
             if (!reviews[i].numberRating) {
@@ -31,21 +32,19 @@ const Forums = () => {
         setReviews(selected);
     }
 
-    const getTitle = () => {
-        let selected = [];
-        movies.map(data => (
-            selected.push(data.movieTitle)
-        ))
-        console.log("Selected:" + selected)
-        setTitles(selected)
+    const getTitle = (movies) => {
+        let result = []
+        for (let i = 0; i < movies.length; i++) {
+            result.push([movies[i]._id, movies[i].movieTitle])
+        }
+        setTitles(result);
     }
 
     useEffect(() => {
         getMovie();
-        getReview();
-        getTitle();
-        console.log("titles:" + titles)
+
     }, []);
+
 
     return (
         <>
@@ -55,7 +54,7 @@ const Forums = () => {
                         <tr>
                             <ForumCard01 />
                         </tr>
-                        <ForumComp02 data={testArray} />
+                        <ForumComp02 titles={titles} />
                         <td>
                             {
                                 reviews.map(movie => (
