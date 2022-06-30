@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+@import url(https://fonts.googleapis.com/css2?family=Bilbo&display=swap);
+
 .App {
   text-align: center;
 }
@@ -40,6 +44,7 @@
 
 /* Content */
 body {
+  font-family: 'Libre Baskerville', serif;
   background-image: linear-gradient(to bottom right, black, rgb(161, 161, 31));
 }
 
@@ -370,6 +375,8 @@ tbody>td {
 
 /* menu div */
 .menu{
+  font-family: 'bilbo';
+  font-size: larger;
   margin:4% 22% 4% 22%;
   padding: 1%;
   border-style: solid;
