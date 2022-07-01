@@ -7,13 +7,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 const BookingConfirmation = () => {
 
-    const { data } = useParams();
+    const { data }  = useParams();
+
     const [movie, setMovie] = useState([]);
 
     
     
     const getMovie = () => {
-        axios.get(`http://localhost:3000/movies/get/` + data)
+        axios.get(`http://localhost:3000/bookings/get/` + data)
                 .then(response => {
                     console.log(response.data);
                      setMovie(response.data);
