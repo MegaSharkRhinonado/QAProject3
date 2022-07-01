@@ -2,6 +2,7 @@ const Review = (data) => {
     
     return (
         <>
+        <div className="miniDiv">
         <center>
             <div style={{
                 width: '99.65%',
@@ -19,6 +20,7 @@ const Review = (data) => {
                 </div>
             </div>
             </center>
+            </div>
 
         </>
     );
