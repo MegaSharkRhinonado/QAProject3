@@ -5,7 +5,7 @@ import PTGComp03 from "../PTGComp/PTGComp03";
 const PTGCard01 = () => {
     return (
         <>
-        <div>
+        <div style={{}}>
             <div className="PTGDivs">
                 <PTGComp01 />
             </div>

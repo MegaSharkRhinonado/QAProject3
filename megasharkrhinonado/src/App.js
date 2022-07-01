@@ -17,6 +17,7 @@ import OpeningTimes from './Components/OpeningTimes/openingTimes';
 import PlacesToGo from './Components/PlacesToGo/placesToGo';
 import BilbosPantry from './Components/FoodAndDrink/bilbosPantry';
 import Termsandconditions from './Components/TermsandConditions/termsAndConditions';
+import SearchBar from './Components/Search/SearchBar';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
-          <Route path ="/" element={<HomePage />} />
+          <Route path ="/HomePage" element={<HomePage />} />
           <Route path ="/About" element={<About />} />
           <Route path ="/Booking/:data" element={<Booking />} />
           <Route path ="/BookingConfirmation/:data" element={<BookingConfirmation />} />
@@ -39,6 +40,8 @@ function App() {
           <Route path ="/GettingThere" element={<GettingThere />} />
           <Route path ="/FoodAndDrink" element={<BilbosPantry />} />
           <Route path ="/TermsAndConditions" element={<Termsandconditions />} />
+          <Route path ="/SearchBar/:data" element={<SearchBar />} />
+
         </Routes>
         <Footer />
       </Router>

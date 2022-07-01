@@ -23,9 +23,7 @@ const BC11 = ({ data }) => {
         let maxChildren = 0;
 
         const handleDateChange = (event) => {
-                setDateValue(previosState => {
-                        return previosState = event.target.value;
-                })
+                setDateValue(event.target.value);
         }
 
         const handleTimeChange = (event) => {
@@ -140,54 +138,72 @@ const BC11 = ({ data }) => {
         // /////////////////////////////////////////////////////////////////////////////////////////////////
         return (
                 <>
-                        <h2>Movie Title: {data.movieTitle} </h2>
-                        <h2>Price = {amount} </h2>
-                        <h2>Date:</h2>
-                        <select id="dateSelected" onChange={handleDateChange}>
-                                {
-                                        data.movieShowings?.map((entry, i) => (
-                                                <option key={i} value={`${entry.date}`}>{`${entry.date}`}</option>
-                                        ))} </select>
-
-
-                        <select id="timeSelected" onChange={handleTimeChange}>
-                                {
-                                        data.movieShowings?.map((entry, i) => (
-                                                <option key={i} value={`${entry.time}`}>{`${entry.time}`}</option>
-                                        ))
-                                }</select>
-
-                        <div>
-                                <label>
-                                        <br />Name: </label>
-                                <br /> <input type="text" id="name" />
+                        <div className="miniDiv">
+                                <h2>Movie Title: {data.movieTitle} </h2>
+                                <h2>Price = {amount} </h2>
                         </div>
-                        <div>
-                                <label>
-                                        <br />Email</label>
-                                <br /> <input type="text" id="email" />
-                        </div>
-                        <div >
-                                <label><br />Children</label><br />
-                                <select id="childrenList" onChange={handleChildrenChange}>
+                        <div className="miniDiv">
+
+                        
+                                <h2>Date:</h2>
+                                <select id="dateSelected" onChange={handleDateChange}>
                                         {
-                                                childArray.map((entry, i) => (
-                                                        <option key={i} value={entry}>{entry}</option>
-                                                ))}
-                                </select>
+                                                data.movieShowings?.map((entry, i) => (
+                                                        <option key={i} value={`${entry.date}`}>{`${entry.date}`}</option>
+                                                ))} </select>
+
+
+                                <select id="timeSelected" onChange={handleTimeChange}>
+                                        {
+                                                data.movieShowings?.map((entry, i) => (
+                                                        <option key={i} value={`${entry.time}`}>{`${entry.time}`}</option>
+                                                ))
+                                        }</select>
+
+                                <div>
+                                        <label>
+                                                <br />Name: </label>
+                                        <br /> <input type="text" id="name" />
+                                </div>
+                                <div>
+                                        <label>
+                                                <br />Email</label>
+                                        <br /> <input type="text" id="email" />
+                                </div>
+                                
+                                <div >
+                                        <label><br />Children</label><br />
+                                        <select id="childrenList" onChange={handleChildrenChange}>
+                                                {
+                                                        childArray.map((entry, i) => (
+                                                                <option key={i} value={entry}>{entry}</option>
+                                                        ))}
+                                        </select>
+                                </div>
+
+                                <div>
+                                        <p>Seats</p>
+                                        {isChecked.map((Checked, index) => (
+                                                <Checkbox
+                                                        key={Checked.name}
+                                                        isChecked={isChecked.checked}
+                                                        checkHandler={() => checkHandler(index)}
+                                                        index={index}
+                                                />
+                                        ))}
+                                </div>
+                        </div>
+                        <div className="miniDiv">
+                                <PayPal
+                                        amount={amount}
+                                        movieTitle={movieTitle}
+                                        bookingDate={bookingDate}
+                                        bookingTime={bookingTime}
+                                        children={children}
+                                        seatSelected={isChecked}
+                                />
                         </div>
 
-                        <div>
-                                <p>Seats</p>
-                                {isChecked.map((Checked, index) => (
-                                        <Checkbox
-                                                key={Checked.name}
-                                                isChecked={isChecked.checked}
-                                                checkHandler={() => checkHandler(index)}
-                                                index={index}
-                                        />
-                                ))}
-                        </div>
                         <PayPal
                                 id={data._id}
                                 amount={amount}
@@ -197,6 +213,7 @@ const BC11 = ({ data }) => {
                                 children={childValue}
                                 seatSelected={isChecked}
                         />
+
                 </>
         );
 }
