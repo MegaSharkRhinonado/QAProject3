@@ -3,8 +3,7 @@ const ForumComp11 = () => {
         <>
             <div>
                 <center>
-                    <h1>FAQ</h1>
-                    
+                    <h1 style={{fontSize:"4em"}}><strong>FAQ</strong></h1>
                 </center>
             </div>
         </>
