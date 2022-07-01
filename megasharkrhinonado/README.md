@@ -1,18 +1,32 @@
-# Getting Started with Create React App
+# Welcome to our QA Cinemas React Project!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Intro
+This was a group project utlizing scrum which is a frame for developing, delivering and sustaining products in an agile way, this is by creating sprints from user stories which have must haves broken down from the specification. We created a QA Cinemas website with a Lord of the Rings Theme throughout.
 
-## Available Scripts
-
-In the project directory, you can run:
+## Getting started
+First of all you will need GitBash, MongoDB and an IDE, We as a group used Visual Studio Code. If you would like to create an empty folder on your desktop, right click inside and click GitBash, this will open up a terminal and you can enter the following commands:
+```
+git init
+git clone https://github.com/MegaSharkRhinonado/QAProject3.git
+code .
+```
+This will initialise the folder into a repo, clone down my project and open up all code inside. You have to go into the folder 'megasharkrhinonado' and in the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser(If this isn't done automatically).
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
+
+#### ALSO 
+you will need to enter the backend folder located in 'src' folder and repeat the previous command:
+### `npm start`
+
+## Running the tests
+For test purposes you can open the code in whatever your preferred IDE is.
+
+## Other Features with npm
 
 ### `npm test`
 
@@ -29,42 +43,35 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Built with using technologies
+* Visual Studio Code - IDE
+* GitBash - Terminal commands to navigate branches
+* GitHub - is a code hosting platform used for collboration and version control allowing pull and merge requests to monitor code.
+* Jira Board - Used for creating user stories and can be integrated with GitHub to allow commits to assign to a story
+* Axios - A router import allowing to create different requests to localhost
+* React - This is the foundation of the project, created by facebook to make web development easier by breaking it down into components
+* Mocha/Chai - Used for testing methods to ensure they're functioning correctly
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
+James Long - https://github.com/2jcjl4 \
+Jesse Morgan - https://github.com/JMorgan-git \
+Matthew Duck - https://github.com/MatthewDuck \
+Eli Stribley - https://github.com/elistribley
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Jira Board link
+https://2jcjl4.atlassian.net/jira/software/projects/MEG/boards/5/roadmap
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Thank you!
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
+---Morgan---
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project was created using:
+### `create-react-app`
