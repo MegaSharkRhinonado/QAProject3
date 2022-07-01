@@ -1,37 +1,20 @@
 import CommentCard from "../ForumsComp/CommentCard"
 import ForumComp02 from "../ForumsComp/ForumComp02";
+import { useState } from "react";
 
-const ForumCard02 = () => {
+const ForumCard02 = ({ data }) => {
 
-    // pass data from the data base into this card data
-    const forumCardData = [
+    const [review, setReview] = useState(data);
 
-        {
-            title: "title Example 1",
-            name: "Name 1",
-            rating: "Rating 1/5",
-            desc: " Description 1"
-
-        },
-        {
-            title: "title Example 2",
-            name: "Name 2",
-            rating: "Rating 2/5",
-            desc: "description 2"
-        }
-    ];
     return (
         <>
-        <ForumComp02 />
-            {
-                forumCardData.map(data => {
-                    return <div className="screenCards"><CommentCard
-                        title={data.title}
-                        name={data.name}
-                        rating={data.rating}
-                        desc={data.desc} /></div>
-                })
-            }
+            <div>
+                {
+                        <CommentCard
+                            title={review.movieTitle}
+                        />
+                }
+            </div>
         </>
     );
 }

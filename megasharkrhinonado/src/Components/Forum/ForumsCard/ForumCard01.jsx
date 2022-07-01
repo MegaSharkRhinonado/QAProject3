@@ -24,7 +24,7 @@ const ForumCard01 = () => {
         <ForumComp11 />
             {
                 forumCardData.map(data => {
-                    return <div className="screenCards"><FAQcard question={data.question} answer={data.answer} /></div>
+                    return <div className="faqCards"><FAQcard question={data.question} answer={data.answer} /></div>
                 })
             }
         </>

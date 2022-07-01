@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+@import url(https://fonts.googleapis.com/css2?family=Bilbo&display=swap);
+
 .App {
   text-align: center;
 }
@@ -40,6 +44,7 @@
 
 /* Content */
 body {
+  font-family: 'Libre Baskerville', serif;
   background-image: linear-gradient(to bottom right, black, rgb(161, 161, 31));
 }
 
@@ -104,7 +109,9 @@ input:active {
 
 /* ABOUTPAGE */
 .aboutContent {
-  margin: 1%;
+  margin-left: 20%;
+  margin-right:20%;
+  margin-bottom: 2%;
   padding: 2%;
   border-style: solid;
   border-color: rgb(0, 0, 0, 0.5);
@@ -143,7 +150,7 @@ td>tr {
 }
 
 .footContainer>table {
-  float: right;
+  float: left;
 }
 
 tbody>td {
@@ -158,13 +165,13 @@ tbody>td {
 
 /* Places To Go */
 .PTGDivs {
-  margin-right: 5%;
-  margin-left: 5%;
+  margin: 2% 15% 2% 15%;
   border-style: solid;
   border-color: #555;
-  ;
   text-align: center;
-
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 
@@ -262,4 +269,118 @@ tbody>td {
   text-align: center;
 }
 
+
 /* SearchBar */
+
+/* T And C */
+
+/* Contact */
+#contact{
+  font-size: 2em;
+  text-align: center;
+  margin-left:40%;
+  margin-right:40%;
+  margin-bottom:5%;
+  margin-top:5%;
+  padding: 2%;
+  border-style: solid;
+  border-color: #464646;
+  background-color: gold;
+  width:20%;
+}
+/* Contact */
+
+/* homepage */
+.homepage{
+  margin-top:2%;
+  margin-bottom:2%;
+  font-size:9.5vh;
+  display:flex;
+  justify-content: center;
+  max-height: 200px;
+}
+.homepage > p{
+  margin-top:auto;
+  margin-bottom:auto;
+  color: rgb(170, 142, 43);
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.7);
+}
+
+#images{
+  margin-left:8%;
+  margin-right:8%;
+  border-style: solid;
+  border-color: #4646467c;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#images > img{
+  padding:2%;
+}
+/* homepage */
+
+.classcards{
+  display: flex;
+  justify-content: left;
+  text-align: left;
+}
+
+/* forums */
+
+#questions{
+  float: left;
+  width: 99.65%;
+  margin: 0px 0px 0px 0%;
+  border: 5px solid #555;
+}
+#textStyle{
+  float: left;
+  margin: 0px 0px 0px 8%;
+  height: 40%;
+  width: 40%;
+}
+.faqCards{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin:1% 5% 0 5%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+/* forums */
+
+/* board */
+
+.board{
+  margin:1% 5% 0 5%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* board */
+
+/* PaymentDivs */
+
+.miniDiv{
+  margin:4% 12% 4% 12%;
+  padding: 1%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+/* PaymentDivs */
+
+/* menu div */
+.menu{
+  font-family: 'bilbo';
+  font-size: larger;
+  margin:4% 22% 4% 22%;
+  padding: 1%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(101, 33, 1, 0.6);
+}
+/* menu div */
+

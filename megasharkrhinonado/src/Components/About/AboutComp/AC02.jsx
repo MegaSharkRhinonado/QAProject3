@@ -16,10 +16,11 @@ const AC02 = () => {
                 <tr><a href='https://www.reddit.com/r/lotr/'><img className="left" src={Reddit} alt="Reddit" width="40"></img></a></tr>
             </td>
           </table>
-          <h2>Peasent Duckee</h2>
+          <h2>Matthew Duck</h2>
           
           {/* change what is in the text for what is needed */}
-          <p> Description ect : I through my own free will must say that i agree with James</p>
+          <h4>Extra Information about Matthew:</h4>
+          <p>Info Info Info</p>
 
         </div>
        </>
