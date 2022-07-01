@@ -38,26 +38,32 @@ const BCCon11 = ({ data }) => {
     return (
         <>
 
-            <form onSubmit={sendEmail}>
+                <form onSubmit={sendEmail}>
 
 
 
-            </form>
+                </form>
 
+                <div className="content">
+                        <div className="miniDiv" style={{minWidth:"400px"}}>
+                                <h1><u>Booking Confirmed!</u></h1>
+                                <h2><strong>Movie Title: {data.movieTitle} </strong></h2>
+                                <div className="board">
+                                        <h2>Date: {data.date}</h2>
+                                        <h2>Time: {data.time}</h2>
+                                        <h2>Email: {data.email}</h2>
+                                        <h2>Children: {data.children}</h2>
 
-            <h2>Booking Confirmed!</h2>
-            <h2>Movie Title: {data.movieTitle} </h2>
-            <h2>Date: {data.date}</h2>
-            <h2>Time: {data.time}</h2>
-            <h2>Email: {data.email}</h2>
-            <h2>Children: {data.children}</h2>
-
-            <h2>Seats: {
-                data.seatID?.map(seat => (
-                    <BCCON12 data={seat} />
-                ))
-            }</h2>
-            <h2>Price: {price}</h2>
+                                        <h2>Seats: {
+                                                data.seatID?.map(seat => (
+                                                <BCCON12 data={seat} />
+                                                ))
+                                        }</h2>
+                                        <h2>Price: {price}</h2>
+                                </div>
+                                <h4>Thank-You for your purchase, Please come again soon</h4>
+                        </div>
+                </div>
         </>
     );
 }
