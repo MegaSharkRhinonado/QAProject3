@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville);
+
+@import url(https://fonts.googleapis.com/css2?family=Bilbo&display=swap);
+
 .App {
   text-align: center;
 }
@@ -40,6 +44,7 @@
 
 /* Content */
 body {
+  font-family: 'Libre Baskerville', serif;
   background-image: linear-gradient(to bottom right, black, rgb(161, 161, 31));
 }
 
@@ -257,17 +262,16 @@ tbody>td {
 
 /* Screen */
 
-/* T And C */
-.tANDc{
-  margin:4%;
-  padding:2%;
-  border-style: solid;
-  border-color: rgb(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.6);
+/* SearchBar */
+
+.results{
+  border: solid #555;
+  text-align: center;
 }
-.tANDc > h2{
-  font-size: 2em;
-}
+
+
+/* SearchBar */
+
 /* T And C */
 
 /* Contact */
@@ -356,3 +360,26 @@ tbody>td {
 }
 
 /* board */
+
+/* PaymentDivs */
+
+.miniDiv{
+  margin:4% 12% 4% 12%;
+  padding: 1%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+/* PaymentDivs */
+
+/* menu div */
+.menu{
+  font-family: 'bilbo';
+  font-size: larger;
+  margin:4% 22% 4% 22%;
+  padding: 1%;
+  border-style: solid;
+  border-color: rgb(0, 0, 0, 0.2);
+  background-color: rgba(101, 33, 1, 0.6);
+}
+/* menu div */

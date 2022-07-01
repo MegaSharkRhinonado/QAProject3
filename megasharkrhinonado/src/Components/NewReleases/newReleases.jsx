@@ -21,11 +21,13 @@ const NewReleases = () => {
 
     return (
         <>
-            {
-                newReleases.map(newRelease =>
-                    <NRC01 data={newRelease} key={newRelease.id} />
-                )
-            }
+            <div className="content">
+                {
+                    newReleases.map(newRelease =>
+                        <NRC01 data={newRelease} key={newRelease.id} />
+                    )
+                }
+            </div>
         </>
     );
 }

@@ -6,9 +6,9 @@ const BPComp03 = () => {
         <div>   
             <table>
                 <tr>
-                    <th><h2>Food Menu</h2></th>
-                    <th><h2>Drink Menu</h2></th>
-                    <th><h2>Confectionary</h2></th>
+                    <th><h2><u>Food Menu</u></h2></th>
+                    <th><h2><u>Drink Menu</u></h2></th>
+                    <th><h2><u>Confectionary</u></h2></th>
                 </tr>
                 <tr>
                     <th><h3>Starters</h3></th>
