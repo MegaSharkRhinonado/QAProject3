@@ -9,11 +9,11 @@ console.log(data)
 
     return (
         <>
-        <div className="searchPageResults">
-            <li>{data.movieTitle}</li>
-            <li>{data.description}</li>
-            <li>{data.rating}</li>
-        </div>
+            <div className="searchPageResults">
+                <li>{data.movieTitle}</li>
+                <li>{data.description}</li>
+                <li>{data.rating}</li>
+            </div>
         </>
     )
 }
