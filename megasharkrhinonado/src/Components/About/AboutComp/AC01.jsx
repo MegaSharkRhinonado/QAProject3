@@ -20,8 +20,7 @@ const AC01 = () => {
           
           {/* change what is in the text for what is needed */}
           <h4>Extra information about James: </h4>
-          <p>Info Info Info</p>
-
+          <p>James was responsible for handling our Jira and Git merge requests, keeping us on track with tasks and supporting each member while picking up parts of the project to work on himself such as the Forum, ContactUs and Bookings.</p>
         </div>
       </>
      );

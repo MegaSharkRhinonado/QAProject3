@@ -20,7 +20,7 @@ const AC03 = () => {
           
           {/* change what is in the text for what is needed */}
           <h4>Extra Information about Eli:</h4>
-          <p>Info Info Info</p>
+          <p>Responsible for documentation and React with Jesse, Eli created primarily Getting There, Food and Drink and the Search bar while editing and styling other pages. Mainly working straight from Jira on tasks not started yet.</p>
 
         </div>
       </>

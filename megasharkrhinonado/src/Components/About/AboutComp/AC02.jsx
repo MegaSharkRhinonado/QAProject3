@@ -20,7 +20,8 @@ const AC02 = () => {
           
           {/* change what is in the text for what is needed */}
           <h4>Extra Information about Matthew:</h4>
-          <p>Info Info Info</p>
+          <p>Duckee was solely in charge of the backend, creating the schemas and routers for booking and movies so that we could use the front end to interact with a database, after finishing the backend he moved onto Listings and New Releases as they were the most heavy linked with backend.
+          </p>
 
         </div>
        </>
