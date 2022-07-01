@@ -1,10 +1,11 @@
 
 import BCCon11 from "../BookingsConComp/BCCon11"
 
-const BCConcard01 = () => {
+
+const BCConcard01 = ({data}) => {
     return ( 
         <>
-        <BCCon11 />
+        <BCCon11 data={data}/>
         </>
      );
 }

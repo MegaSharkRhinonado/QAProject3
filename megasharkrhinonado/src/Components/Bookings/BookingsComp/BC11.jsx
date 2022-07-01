@@ -34,21 +34,12 @@ const BC11 = ({ data }) => {
                 setChildValue(event.target.value);
         }
 
-        const checkHandler = (index) => {
-                const updateChecked = isChecked.map((Checked, currentIndex) =>
-                        currentIndex === index ? !Checked : Checked
-                );
 
-                setIsChecked(updateChecked);
-                checkPrice();
-                checkChildren();
-                childrenList();
-        }
 
         const checkPrice = () => {
                 let total = 0;
                 for (let i = 0; i < isChecked.length; i++) {
-                        if (isChecked[i] === true) {
+                        if (isChecked[i].checked === true) {
                                 total += seats[i].price;
                                 console.log(total)
                         }
@@ -59,7 +50,7 @@ const BC11 = ({ data }) => {
         const checkChildren = () => {
                 maxChildren = 0;
                 for (let i = 0; i < isChecked.length; i++) {
-                        if (isChecked[i] === true) {
+                        if (isChecked[i].checked === true) {
                                 maxChildren++
                         }
                 }
@@ -74,6 +65,20 @@ const BC11 = ({ data }) => {
                         }
                 }
                 setChildArray(selected);
+        }
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        const seatAvailable = (time, date) => {
+                console.log("Date:" + dateValue);
+                console.log("Time:" + timeValue)
+                axios.get(`http://localhost:3000/bookings/get/${data.movieTitle}/${date}/${time}`)
+                        .then(response => {
+                                setAvailable(response.data)
+                        }).catch((exception) => {
+                                console.log(exception);
+                        });
         }
 
         const checkAvailable = () => {
@@ -100,6 +105,25 @@ const BC11 = ({ data }) => {
                 console.log("Exists:" + data);
         }
 
+
+// +++++++++++
+        const checkHandler = (index) => {
+                const updatedSeats = isChecked.map((seat, currentIndex) => {
+                        // currentIndex === index ? !Checked : Checked
+                        if (currentIndex === index) {
+                                seat.checked = !seat.checked;
+                        }
+                        return seat;  
+                 });
+
+                setIsChecked(updatedSeats);
+                checkPrice();
+                checkChildren();
+                childrenList();
+        }
+// +++++++++++
+      
+
         useEffect(() => {
                 seatAvailable(timeValue, dateValue);
                 checkAvailable();
@@ -108,17 +132,10 @@ const BC11 = ({ data }) => {
                 //reset seat state
         }, [timeValue, dateValue])
 
-        const seatAvailable = (time, date) => {
-                console.log("Date:" + dateValue);
-                console.log("Time:" + timeValue)
-                axios.get(`http://localhost:3000/bookings/get/${data.movieTitle}/${date}/${time}`)
-                        .then(response => {
-                                setAvailable(response.data)
-                        }).catch((exception) => {
-                                console.log(exception);
-                        });
-        }
-
+    
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
         return (
                 <>
                         <div className="miniDiv">
@@ -186,6 +203,17 @@ const BC11 = ({ data }) => {
                                         seatSelected={isChecked}
                                 />
                         </div>
+
+                        <PayPal
+                                id={data._id}
+                                amount={amount}
+                                movieTitle={movieTitle}
+                                bookingDate={dateValue}
+                                bookingTime={timeValue}
+                                children={childValue}
+                                seatSelected={isChecked}
+                        />
+
                 </>
         );
 }
