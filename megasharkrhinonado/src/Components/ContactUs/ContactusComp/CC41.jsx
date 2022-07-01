@@ -12,7 +12,7 @@ import React from 'react';
 
 const CC41 = () => {
         return (
-                <>
+                <><div className="miniDiv">
                         <center>
                                 <form method="post" action="mailto:lordHugePeePee@gmail.com">
                                         <div>
@@ -58,7 +58,7 @@ const CC41 = () => {
 
                         </center>
 
-
+                        </div>
                 </>
         );
 }

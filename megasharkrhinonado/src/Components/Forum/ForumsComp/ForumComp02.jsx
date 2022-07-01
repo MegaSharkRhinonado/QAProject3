@@ -26,8 +26,9 @@ const ForumComp02 = ({ titles }) => {
 
     return (
         <>
-            <div name="board">
-                <h2>Discussion Board</h2>
+            <div className="board">
+                <center>
+                <h2><u>Discussion Board</u></h2>
                 <div>
                     <label>Title: </label>
                     <select id="movieList" onChange={(event) => setTitleSelected(event.target.value)}>
@@ -55,6 +56,7 @@ const ForumComp02 = ({ titles }) => {
                     <textarea rows="10" cols="50" type="text" id="creatureNotes" placeholder="This film was absolutly amazing" onChange={(event)=> setInputComment(event.target.value)} />
                 </div>
                 <button id="createObjBtn" onClick={newReview}>Submit</button>
+                </center>
             </div>
         </>
     );

@@ -47,22 +47,13 @@ const Forums = () => {
     return (
         <>
             <div className="content">
-                <table>
-                    <tbody>
-                        <tr>
-                            <ForumCard01 />
-                        </tr>
-                        <ForumComp02 titles={titles} />
-                        <td>
-                            {
-                                reviews.map(movie => (
-                                    <CommentCard data={movie} />
-                                ))
-                            }
-
-                        </td>
-                    </tbody>
-                </table>
+                <ForumCard01 />
+                <ForumComp02 titles={titles} />
+                {
+                    reviews.map(movie => (
+                        <CommentCard data={movie} />
+                    ))
+                }
             </div>
         </>
     );

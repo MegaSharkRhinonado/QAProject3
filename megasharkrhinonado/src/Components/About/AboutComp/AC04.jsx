@@ -20,7 +20,7 @@ const AC04 = () => {
           
           {/* change what is in the text for what is needed */}
           <h4>Extra Information about Jesse:</h4>
-          <p>Info Info Info</p>
+          <p>Jesse created our Nav Bar, Footer and a lot of our Components for our website as well as doing the majority of the css styling. Jesse's attention to detail mean't he could go a touch up any pages not quite visibly pleasing.</p>
 
         </div>
       </>
