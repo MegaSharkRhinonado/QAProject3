@@ -23,9 +23,7 @@ const BC11 = ({ data }) => {
         let maxChildren = 0;
 
         const handleDateChange = (event) => {
-                setDateValue(previosState => {
-                        return previosState = event.target.value;
-                })
+                setDateValue(event.target.value);
         }
 
         const handleTimeChange = (event) => {
