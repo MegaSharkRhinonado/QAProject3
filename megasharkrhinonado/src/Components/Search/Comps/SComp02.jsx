@@ -50,11 +50,13 @@ const SComp02 = () => {
                         console.log(listing);
                         return (
                         <>
-                        <div className="results">
-                        <h3>{listing.movieTitle}</h3>
-                        <p>{listing.description}</p>
-                        <h4>{listing.rating}</h4>
-                        </div>
+                            <div className="miniDiv" style={{height:"400px"}}>
+                                <div className="results" style={{height:"100%"}}>
+                                    <h2><u>{listing.movieTitle}</u></h2>
+                                    <p>{listing.description}</p>
+                                    <h3>{listing.rating}</h3>
+                                </div>
+                            </div>
                         </>
                         )
                     })}
