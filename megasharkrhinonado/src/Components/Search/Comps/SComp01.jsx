@@ -19,7 +19,7 @@ const SComp01 = ({ handleSearch }) => {
     
     return (
         <>
-           
+            <div style={{marginRight:"2%", marginTop:"0.5%", float:"right"}}>
                 <form onSubmit={(e) => handleSearch(query, e)}>
                     <label htmlFor='nav-search'>
                         <span className='visually-hidden'></span>
@@ -28,12 +28,13 @@ const SComp01 = ({ handleSearch }) => {
                         name= 'search'
                         ref={searchInput}
                         type='text'
-                        placeholder='Search Cinema Titles'
-                        
+                        placeholder='Search Cinema Titles' 
+                        style={{ height:"30px", width:"300px"}}
                     />
-                   <button onClick={handleChange} type="button">Search</button>
+                   <button onClick={handleChange} type="button" 
+                        style={{height:"30px"}}>Search</button>
                 </form>
-            
+            </div>
         </>
     );
 };

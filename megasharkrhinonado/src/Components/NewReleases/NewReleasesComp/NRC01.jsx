@@ -1,3 +1,6 @@
+import NRC02 from "./NRC02";
+
+
 const NRC01 = ({ data }) => {
     return (
         <>
@@ -6,11 +9,19 @@ const NRC01 = ({ data }) => {
                     <img src={data.movieImage} alt="PictureOfCinema" width="350px" />
                     <h1>{data.movieTitle}</h1>
                     <h3>{data.description}</h3>
+                    <h2>Featuring: {data.actors}</h2>
+                    <h2>Directed by: {data.directors}</h2>
+                    <h2>Runtime: {data.runtime}</h2>
+                    <h2>Release Date: {data.releaseDate}</h2>
                 </div>
 
-                <h2>showing times</h2>
-                <h3>{data.movieShowings}</h3>
-                <h2>directors and actors test 1 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus esse voluptatibus maxime neque, molestiae, nulla voluptatum soluta perferendis quasi magni voluptas aliquid velit distinctio, at quos voluptates ea minus temporibus.</h2>
+                <h2>Showing times</h2>
+                {
+                    data.movieShowings.map(data =>
+                        <NRC02 data={data} key={data._id} />
+                    )
+                }
+
             </div>
         </>
     );

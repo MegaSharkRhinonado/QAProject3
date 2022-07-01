@@ -28,7 +28,7 @@ function App() {
           <Route path ="/HomePage" element={<HomePage />} />
           <Route path ="/About" element={<About />} />
           <Route path ="/Booking/:data" element={<Booking />} />
-          <Route path ="/BookingConfirmation" element={<BookingConfirmation />} />
+          <Route path ="/BookingConfirmation/:data" element={<BookingConfirmation />} />
           <Route path ="/Classifications" element={<Classification />} />
           <Route path ="/ContactUs" element={<ContactUs />} />
           <Route path ="/Forums" element={<Forums />} />
