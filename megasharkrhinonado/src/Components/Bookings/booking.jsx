@@ -26,8 +26,12 @@ const Booking = () => {
 
     return (
         <>
-            <BCard01 data={movie} />
-            <BCard02 />
+            <div className="content">
+                <div className="PTGDivs">
+                    <BCard01 data={movie} />
+                    <BCard02 />
+                </div>
+            </div>
         </>
     );
 }
