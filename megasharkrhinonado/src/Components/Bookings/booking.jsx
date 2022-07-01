@@ -1,5 +1,5 @@
 import BCard01 from "./BookingsCards/BCard01";
-import BCard02 from "./BookingsCards/BCard02";
+
 // import BC11 from "./BookingsComp/BC11";
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -29,7 +29,7 @@ const Booking = () => {
             <div className="content">
                 <div className="PTGDivs">
                     <BCard01 data={movie} />
-                    <BCard02 />
+                    
                 </div>
             </div>
         </>

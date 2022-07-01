@@ -204,15 +204,6 @@ const BC11 = ({ data }) => {
                                 />
                         </div>
 
-                        <PayPal
-                                id={data._id}
-                                amount={amount}
-                                movieTitle={movieTitle}
-                                bookingDate={dateValue}
-                                bookingTime={timeValue}
-                                children={childValue}
-                                seatSelected={isChecked}
-                        />
 
                 </>
         );
