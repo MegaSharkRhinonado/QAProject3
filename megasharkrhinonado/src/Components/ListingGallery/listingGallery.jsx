@@ -22,11 +22,13 @@ const ListingGallery = () => {
 
     return (
         <>
-            {
-                listings.map(listing =>
-                    <LGC01 data={listing} key={listing.id} />
-                )
-            }
+            <div className="content">
+                {
+                    listings.map(listing =>
+                        <LGC01 data={listing} key={listing.id} />
+                    )
+                }
+            </div>
         </>
     );
 }

@@ -5,11 +5,16 @@ import { useNavigate } from "react-router-dom";
 const style = { "layout": "vertical" };
 const currency = "GBP";
 
-const ButtonWrapper = ({ currency, showSpinner, amount, movieTitle, bookingDate, bookingTime, children, seatSelected }) => {
+const ButtonWrapper = ({ id, currency, showSpinner, amount, movieTitle, bookingDate, bookingTime, children, seatSelected }) => {
     const [{ options, isPending }, dispatch] = usePayPalScriptReducer();
 
+
+    //  testing Console.log
+    console.log("this is reading Button Wrapper" + bookingDate +  bookingTime +  seatSelected);
+
+    // ---
     const navigate = useNavigate();
-    const bookingComplete = () => navigate("/BookingConfirmation");
+    const bookingComplete = (id) => navigate(`/BookingConfirmation/${id}`);
 
 
     useEffect(() => {
@@ -64,14 +69,15 @@ const ButtonWrapper = ({ currency, showSpinner, amount, movieTitle, bookingDate,
                         ]
                     })
                         .then(response => {
-                            console.log(response);
+                            bookingComplete(response.data._id);
+                            console.log("THIS IS A RESPONSE PLEASE WORK " + response);
                             console.log(details)
                         })
                         .catch(error => {
                             console.log(error);
                         });
 
-                    bookingComplete();
+                    
                 })
 
 
@@ -81,15 +87,17 @@ const ButtonWrapper = ({ currency, showSpinner, amount, movieTitle, bookingDate,
     );
 }
 
-export default function PayPal({ amount, movieTitle, bookingDate, bookingTime, children, seatSelected }) {
+export default function PayPal({ id, amount, movieTitle, bookingDate, bookingTime, children, seatSelected }) {
     return (
         <>
             <PayPalScriptProvider options={{
                 "client-id": "test",
                 components: "buttons",
                 currency: "GBP"
+                
             }}>
                 <ButtonWrapper
+                    id={id}
                     currency={currency}
                     showSpinner={false}
                     amount={amount}

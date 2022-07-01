@@ -23,9 +23,7 @@ const BC11 = ({ data }) => {
         let maxChildren = 0;
 
         const handleDateChange = (event) => {
-                setDateValue(previosState => {
-                        return previosState = event.target.value;
-                })
+                setDateValue(event.target.value);
         }
 
         const handleTimeChange = (event) => {
@@ -36,21 +34,12 @@ const BC11 = ({ data }) => {
                 setChildValue(event.target.value);
         }
 
-        const checkHandler = (index) => {
-                const updateChecked = isChecked.map((Checked, currentIndex) =>
-                        currentIndex === index ? !Checked : Checked
-                );
 
-                setIsChecked(updateChecked);
-                checkPrice();
-                checkChildren();
-                childrenList();
-        }
 
         const checkPrice = () => {
                 let total = 0;
                 for (let i = 0; i < isChecked.length; i++) {
-                        if (isChecked[i] === true) {
+                        if (isChecked[i].checked === true) {
                                 total += seats[i].price;
                                 console.log(total)
                         }
@@ -61,7 +50,7 @@ const BC11 = ({ data }) => {
         const checkChildren = () => {
                 maxChildren = 0;
                 for (let i = 0; i < isChecked.length; i++) {
-                        if (isChecked[i] === true) {
+                        if (isChecked[i].checked === true) {
                                 maxChildren++
                         }
                 }
@@ -76,6 +65,20 @@ const BC11 = ({ data }) => {
                         }
                 }
                 setChildArray(selected);
+        }
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        
+        const seatAvailable = (time, date) => {
+                console.log("Date:" + dateValue);
+                console.log("Time:" + timeValue)
+                axios.get(`http://localhost:3000/bookings/get/${data.movieTitle}/${date}/${time}`)
+                        .then(response => {
+                                setAvailable(response.data)
+                        }).catch((exception) => {
+                                console.log(exception);
+                        });
         }
 
         const checkAvailable = () => {
@@ -102,6 +105,25 @@ const BC11 = ({ data }) => {
                 console.log("Exists:" + data);
         }
 
+
+// +++++++++++
+        const checkHandler = (index) => {
+                const updatedSeats = isChecked.map((seat, currentIndex) => {
+                        // currentIndex === index ? !Checked : Checked
+                        if (currentIndex === index) {
+                                seat.checked = !seat.checked;
+                        }
+                        return seat;  
+                 });
+
+                setIsChecked(updatedSeats);
+                checkPrice();
+                checkChildren();
+                childrenList();
+        }
+// +++++++++++
+      
+
         useEffect(() => {
                 seatAvailable(timeValue, dateValue);
                 checkAvailable();
@@ -110,75 +132,88 @@ const BC11 = ({ data }) => {
                 //reset seat state
         }, [timeValue, dateValue])
 
-        const seatAvailable = (time, date) => {
-                console.log("Date:" + dateValue);
-                console.log("Time:" + timeValue)
-                axios.get(`http://localhost:3000/bookings/get/${data.movieTitle}/${date}/${time}`)
-                        .then(response => {
-                                setAvailable(response.data)
-                        }).catch((exception) => {
-                                console.log(exception);
-                        });
-        }
-
+    
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
+        // /////////////////////////////////////////////////////////////////////////////////////////////////
         return (
                 <>
-                        <h2>Movie Title: {data.movieTitle} </h2>
-                        <h2>Price = {amount} </h2>
-                        <h2>Date:</h2>
-                        <select id="dateSelected" onChange={handleDateChange}>
-                                {
-                                        data.movieShowings?.map((entry, i) => (
-                                                <option key={i} value={`${entry.date}`}>{`${entry.date}`}</option>
-                                        ))} </select>
-
-
-                        <select id="timeSelected" onChange={handleTimeChange}>
-                                {
-                                        data.movieShowings?.map((entry, i) => (
-                                                <option key={i} value={`${entry.time}`}>{`${entry.time}`}</option>
-                                        ))
-                                }</select>
-
-                        <div>
-                                <label>
-                                        <br />Name: </label>
-                                <br /> <input type="text" id="name" />
+                        <div className="miniDiv">
+                                <h2>Movie Title: {data.movieTitle} </h2>
+                                <h2>Price = {amount} </h2>
                         </div>
-                        <div>
-                                <label>
-                                        <br />Email</label>
-                                <br /> <input type="text" id="email" />
-                        </div>
-                        <div >
-                                <label><br />Children</label><br />
-                                <select id="childrenList" onChange={handleChildrenChange}>
+                        <div className="miniDiv">
+
+                        
+                                <h2>Date:</h2>
+                                <select id="dateSelected" onChange={handleDateChange}>
                                         {
-                                                childArray.map((entry, i) => (
-                                                        <option key={i} value={entry}>{entry}</option>
-                                                ))}
-                                </select>
+                                                data.movieShowings?.map((entry, i) => (
+                                                        <option key={i} value={`${entry.date}`}>{`${entry.date}`}</option>
+                                                ))} </select>
+
+
+                                <select id="timeSelected" onChange={handleTimeChange}>
+                                        {
+                                                data.movieShowings?.map((entry, i) => (
+                                                        <option key={i} value={`${entry.time}`}>{`${entry.time}`}</option>
+                                                ))
+                                        }</select>
+
+                                <div>
+                                        <label>
+                                                <br />Name: </label>
+                                        <br /> <input type="text" id="name" />
+                                </div>
+                                <div>
+                                        <label>
+                                                <br />Email</label>
+                                        <br /> <input type="text" id="email" />
+                                </div>
+                                
+                                <div >
+                                        <label><br />Children</label><br />
+                                        <select id="childrenList" onChange={handleChildrenChange}>
+                                                {
+                                                        childArray.map((entry, i) => (
+                                                                <option key={i} value={entry}>{entry}</option>
+                                                        ))}
+                                        </select>
+                                </div>
+
+                                <div>
+                                        <p>Seats</p>
+                                        {isChecked.map((Checked, index) => (
+                                                <Checkbox
+                                                        key={Checked.name}
+                                                        isChecked={isChecked.checked}
+                                                        checkHandler={() => checkHandler(index)}
+                                                        index={index}
+                                                />
+                                        ))}
+                                </div>
+                        </div>
+                        <div className="miniDiv">
+                                <PayPal
+                                        amount={amount}
+                                        movieTitle={movieTitle}
+                                        bookingDate={bookingDate}
+                                        bookingTime={bookingTime}
+                                        children={children}
+                                        seatSelected={isChecked}
+                                />
                         </div>
 
-                        <div>
-                                <p>Seats</p>
-                                {isChecked.map((Checked, index) => (
-                                        <Checkbox
-                                                key={Checked.name}
-                                                isChecked={isChecked.checked}
-                                                checkHandler={() => checkHandler(index)}
-                                                index={index}
-                                        />
-                                ))}
-                        </div>
                         <PayPal
+                                id={data._id}
                                 amount={amount}
                                 movieTitle={movieTitle}
-                                bookingDate={bookingDate}
-                                bookingTime={bookingTime}
-                                children={children}
+                                bookingDate={dateValue}
+                                bookingTime={timeValue}
+                                children={childValue}
                                 seatSelected={isChecked}
                         />
+
                 </>
         );
 }

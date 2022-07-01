@@ -8,15 +8,17 @@ const BPCard01 = () => {
     return (
         <>
             <div className="content">
-                <h2 className="headerBP">Bilbo's Pantry</h2>
-                <BPComp01 />
-                    <table className="fdTable">
-                        <tbody>
-                            <BPComp03 />
-                        </tbody>
-                    </table>
-               
-               <BPComp04 />
+                <div className="menu">
+                    <h1 className="headerBP"><u>Bilbo's Pantry</u></h1>
+                    <BPComp01 />
+                        <table className="fdTable">
+                            <tbody className="miniDiv">
+                                <BPComp03 />
+                            </tbody>
+                        </table>
+                
+                <BPComp04 />
+               </div>
             </div>
 
         </>
