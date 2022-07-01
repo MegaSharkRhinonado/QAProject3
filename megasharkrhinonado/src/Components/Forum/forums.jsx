@@ -1,14 +1,13 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import ForumCard01 from "./ForumsCard/ForumCard01";
-import ForumCard02 from "./ForumsCard/ForumCard02";
 import ForumComp02 from "./ForumsComp/ForumComp02";
 import CommentCard from "./ForumsComp/CommentCard"
 
 const Forums = () => {
 
     const [movies, setMovies] = useState([]);
-    const [reviews, setReviews] = useState(movies);
+    const [reviews, setReviews] = useState([]);
     const [titles, setTitles] = useState([]);
 
     const getMovie = () => {
@@ -22,11 +21,11 @@ const Forums = () => {
             });
     }
 
-    const getReview = (reviews) => {
-        let selected = reviews
-        for (let i = 1; i <= reviews; i++) {
-            if (!reviews[i].numberRating) {
-                selected.push(i);
+    const getReview = (movies) => {
+        let selected = [] 
+        for (let i = 0; i < movies.length; i++) {
+            if (movies[i].movieReviews.length > 0) {
+                selected.push(movies[i]);
             }
         }
         setReviews(selected);
@@ -42,7 +41,6 @@ const Forums = () => {
 
     useEffect(() => {
         getMovie();
-
     }, []);
 
 

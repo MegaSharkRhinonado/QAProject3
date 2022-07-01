@@ -25,8 +25,8 @@ const MOVIE_REVIEW_SCHEMA = new Schema({
         max: [200, "Comment can be no longer than 200 characters"]
     },
     numberRating: {
-        type: Number,
-        enum: [1, 2, 3, 4, 5],
+        type: String,
+        enum: ["1", "2", "3", "4", "5"],
         message: "{VALUE} is not supported. Must be a Number between 1 and 5",
         required: [true, "Rating is required"]
     }
